@@ -1,0 +1,46 @@
+inn,drug_class,atc,synonyms,brands,english_names,guidelines
+enalapril,IECA,C09AA02,enalapril maleato,Renitec,Enalapril,hta|ic|erc
+captopril,IECA,C09AA01,,Capoten,Captopril,hta|ic
+losartán,ARA II,C09CA01,losartan potasico,Cozaar,Losartan,hta|ic|erc
+valsartán,ARA II,C09CA03,,Diovan,Valsartan,hta|ic
+sacubitrilo/valsartán,INRA (ARNI),C09DX04,sacubitril/valsartan|sacubitrilo valsartan|sacubitrilo + valsartan,Entresto,Sacubitril|Valsartan,ic
+amlodipino,Calcioantagonista dihidropiridínico,C08CA01,amlodipina|amlodipino besilato,Norvasc,Amlodipine,hta
+hidroclorotiazida,Diurético tiazídico,C03AA03,hctz,,Hydrochlorothiazide,hta
+furosemida,Diurético de asa,C03CA01,furosemide,Lasix,Furosemide,hta|ic
+espironolactona,Antagonista de aldosterona,C03DA01,,Aldactone,Spironolactone,ic
+eplerenona,Antagonista de aldosterona,C03DA04,,Inspra,Eplerenone,ic
+finerenona,Antagonista no esteroideo del receptor mineralocorticoide,C03DA05,,Kerendia,Finerenone,erc|dm2
+carvedilol,Betabloqueador,C07AG02,,Dilatrend,Carvedilol,ic|hta
+bisoprolol,Betabloqueador,C07AB07,bisoprolol fumarato,Concor,Bisoprolol,ic|hta
+ivabradina,Inhibidor de corriente If,C01EB17,,Procoralan,Ivabradine,ic
+digoxina,Glucósido cardiaco,C01AA05,digoxin,Lanoxin,Digoxin,fa
+amiodarona,Antiarrítmico clase III,C01BD01,amiodarona clorhidrato,Cordarone,Amiodarone,fa
+diltiazem,Calcioantagonista no dihidropiridínico,C08DB01,,,Diltiazem,fa|hta
+warfarina,Anticoagulante antagonista de vitamina K,B01AA03,warfarina sodica|warfarin,Coumadin,Warfarin,fa
+dabigatrán,Anticoagulante oral directo,B01AE07,dabigatran etexilato,Pradaxa,Dabigatran etexilate,fa
+ácido acetilsalicílico,Antiagregante plaquetario / AINE,B01AC06,aas|acido acetil salicilico|aspirina,Aspirina,Acetylsalicylic acid,hta|fa
+ibuprofeno,AINE,M01AE01,,Advil|Motrin,Ibuprofen,erc
+naproxeno,AINE,M01AE02,naproxeno sodico,Apronax,Naproxen,—
+diclofenaco,AINE,M01AB05,diclofenaco sodico|diclofenaco potasico,Voltaren,Diclofenac,—
+paracetamol,Analgésico/antipirético,N02BE01,acetaminofen|acetaminofeno|acetaminophen,Panadol|Tylenol,Acetaminophen,erc
+metformina,Biguanida,A10BA02,metformina clorhidrato,Glucophage,Metformin,dm2
+glibenclamida,Sulfonilurea,A10BB01,gliburida,Daonil|Euglucon,Glyburide,dm2
+gliclazida,Sulfonilurea,A10BB09,,Diamicron,Gliclazide,dm2
+pioglitazona,Tiazolidinediona,A10BG03,,Actos,Pioglitazone,dm2
+empagliflozina,iSGLT2,A10BK03,,Jardiance,Empagliflozin,dm2|erc|hta|ic
+dapagliflozina,iSGLT2,A10BK01,,Forxiga,Dapagliflozin,ic|dm2|erc
+liraglutida,Agonista del receptor GLP-1,A10BJ02,,Victoza,Liraglutide,dm2
+insulina,Insulina,A10A,insulina nph|insulina humana|insulina regular|insulina glargina|insulina basal,Lantus,Insulin human|Insulin glargine,dm2
+atorvastatina,Estatina,C10AA05,atorvastatina calcica,Lipitor,Atorvastatin,erc|hta
+alopurinol,Inhibidor de xantina oxidasa,M04AA01,allopurinol,Zyloprim,Allopurinol,erc
+omeprazol,Inhibidor de bomba de protones,A02BC01,,Losec,Omeprazole,hta
+prednisona,Corticoide sistémico,H02AB07,,Meticorten,Prednisone,nac
+amoxicilina,Penicilina,J01CA04,,,Amoxicillin,nac
+amoxicilina/ácido clavulánico,Penicilina + inhibidor de betalactamasa,J01CR02,amoxicilina + acido clavulanico|amoxicilina clavulanico|amoxicilina/clavulanato|amoxi-clav,Augmentin,Amoxicillin|Clavulanic acid,nac
+ampicilina/sulbactam,Penicilina + inhibidor de betalactamasa,J01CR01,ampicilina + sulbactam,Unasyn,Ampicillin|Sulbactam,nac
+ceftriaxona,Cefalosporina 3.ª generación,J01DD04,,Rocephin,Ceftriaxone,nac
+cefuroxima,Cefalosporina 2.ª generación,J01DC02,cefuroxima axetilo,Zinnat,Cefuroxime,nac
+azitromicina,Macrólido,J01FA10,,Zithromax,Azithromycin,nac
+claritromicina,Macrólido,J01FA09,,Klaricid,Clarithromycin,nac|ic
+doxiciclina,Tetraciclina,J01AA02,,Vibramicina,Doxycycline,nac
+levofloxacino,Fluoroquinolona,J01MA12,levofloxacina,Tavanic,Levofloxacin,nac

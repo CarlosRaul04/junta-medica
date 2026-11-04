@@ -1,0 +1,67 @@
+{
+  "case": {
+    "case_id": "CASO-016",
+    "age": 76,
+    "sex": "M",
+    "chief_complaint": "Se cansa más de lo normal; en el control le encontraron el pulso irregular",
+    "symptoms": [
+      "fatiga",
+      "pulso irregular",
+      "sin palpitaciones"
+    ],
+    "medical_history": [
+      "hipertensión arterial",
+      "ictus isquémico hace 2 años"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "enalapril",
+        "dose": "10 mg cada 12 h"
+      },
+      {
+        "name": "ácido acetilsalicílico",
+        "dose": "100 mg cada 24 h"
+      },
+      {
+        "name": "atorvastatina",
+        "dose": "40 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "heart_rate_bpm": 104,
+      "systolic_bp_mmhg": 138,
+      "lvef_pct": 52,
+      "creatinine_mg_dl": 1.1,
+      "egfr_ml_min": 64,
+      "inr": 1.0
+    }
+  },
+  "expected": {
+    "type": "atypical",
+    "test_cases": [
+      "CP05"
+    ],
+    "primary_diagnosis": {
+      "icd10": "I48.9",
+      "name": "Fibrilación auricular asintomática (subclínica)"
+    },
+    "acceptable_diagnoses": [
+      "I48",
+      "I48.1",
+      "I48.2",
+      "I48.9"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_fa"
+    ],
+    "key_points": [
+      "Ictus previo + edad + HTA: CHA2DS2-VASc alto, indicación de anticoagulación",
+      "La aspirina sola no es protección suficiente"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_fa"
+  }
+}

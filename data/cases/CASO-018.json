@@ -1,0 +1,51 @@
+{
+  "case": {
+    "case_id": "CASO-018",
+    "age": 45,
+    "sex": "F",
+    "chief_complaint": "Cansancio, aumento de peso y mucho frío",
+    "symptoms": [
+      "fatiga",
+      "aumento de peso",
+      "intolerancia al frío",
+      "estreñimiento",
+      "piel seca"
+    ],
+    "medical_history": [],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "omeprazol",
+        "dose": "20 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "heart_rate_bpm": 58,
+      "hemoglobin_g_dl": 11.6,
+      "sodium_meq_l": 134
+    }
+  },
+  "expected": {
+    "type": "out_of_scope",
+    "test_cases": [
+      "CP07"
+    ],
+    "primary_diagnosis": {
+      "icd10": "E03.9",
+      "name": "Hipotiroidismo, no especificado"
+    },
+    "acceptable_diagnoses": [
+      "E03",
+      "E03.9"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": true,
+    "relevant_guidelines": [],
+    "key_points": [
+      "Sin guía de tiroides en la base: declarar evidencia insuficiente",
+      "Puede sugerir pedir TSH, pero sin recomendación terapéutica citada"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de conocimiento clínico general (fuera del alcance de las guías)"
+  }
+}

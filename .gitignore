@@ -1,0 +1,11 @@
+# Entorno virtual y secretos (NUNCA subir)
+.venv/
+.env
+
+# Archivos generados
+__pycache__/
+*.pyc
+.pytest_cache/
+chroma_db/
+*.sqlite
+output/

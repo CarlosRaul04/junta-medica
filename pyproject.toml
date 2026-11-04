@@ -1,0 +1,9 @@
+[project]
+name = "junta-medica-ia"
+version = "0.1.0"
+description = "Sistema multiagente con RAG y debate colegiado para segundas opiniones médicas en Medicina Interna"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

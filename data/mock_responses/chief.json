@@ -1,0 +1,10 @@
+{
+  "summary": "[SIMULADO] Respuesta de ejemplo del Médico Jefe (modo simulado, sin IA real).",
+  "primary_diagnosis": {"icd10": "I50.0", "name": "[SIMULADO] Insuficiencia cardiaca congestiva"},
+  "differential_diagnoses": [{"icd10": "I10", "name": "[SIMULADO] Hipertensión esencial"}],
+  "recommendations": [
+    {"text": "[SIMULADO] Seguir las alertas de seguridad del informe.", "citations": []}
+  ],
+  "disagreements": [],
+  "insufficient_evidence": false
+}

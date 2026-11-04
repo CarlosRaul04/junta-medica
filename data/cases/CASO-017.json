@@ -1,0 +1,44 @@
+{
+  "case": {
+    "case_id": "CASO-017",
+    "age": 40,
+    "sex": "M",
+    "chief_complaint": "Placas rojas con escamas en codos y rodillas desde hace un año",
+    "symptoms": [
+      "placas eritematoescamosas en codos y rodillas",
+      "prurito",
+      "lesiones en cuero cabelludo"
+    ],
+    "medical_history": [],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "hidrocortisona crema",
+        "dose": "aplicación cada 12 h"
+      }
+    ],
+    "lab_results": {}
+  },
+  "expected": {
+    "type": "out_of_scope",
+    "test_cases": [
+      "CP07"
+    ],
+    "primary_diagnosis": {
+      "icd10": "L40.0",
+      "name": "Psoriasis vulgar"
+    },
+    "acceptable_diagnoses": [
+      "L40",
+      "L40.0"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": true,
+    "relevant_guidelines": [],
+    "key_points": [
+      "Ninguna guía de la base cubre psoriasis: declarar evidencia insuficiente y derivar a dermatología"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de conocimiento clínico general (fuera del alcance de las guías)"
+  }
+}

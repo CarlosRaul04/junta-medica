@@ -1,0 +1,57 @@
+{
+  "case": {
+    "case_id": "CASO-001",
+    "age": 58,
+    "sex": "M",
+    "chief_complaint": "Cefalea occipital matutina y presión arterial elevada en tres controles",
+    "symptoms": [
+      "cefalea occipital matutina",
+      "mareos ocasionales"
+    ],
+    "medical_history": [
+      "obesidad",
+      "tabaquismo"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "paracetamol",
+        "dose": "500 mg a demanda"
+      }
+    ],
+    "lab_results": {
+      "systolic_bp_mmhg": 162,
+      "diastolic_bp_mmhg": 98,
+      "heart_rate_bpm": 78,
+      "creatinine_mg_dl": 0.9,
+      "egfr_ml_min": 92,
+      "potassium_meq_l": 4.3,
+      "glucose_mg_dl": 96
+    }
+  },
+  "expected": {
+    "type": "common",
+    "test_cases": [
+      "CP04"
+    ],
+    "primary_diagnosis": {
+      "icd10": "I10",
+      "name": "Hipertensión esencial (primaria)"
+    },
+    "acceptable_diagnoses": [
+      "I10"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_hta"
+    ],
+    "key_points": [
+      "Confirmar el diagnóstico con mediciones repetidas",
+      "Iniciar tratamiento farmacológico según la guía de HTA",
+      "Medidas de estilo de vida y cese del tabaco"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_hta"
+  }
+}

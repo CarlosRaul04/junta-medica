@@ -1,0 +1,90 @@
+{
+  "case": {
+    "case_id": "CASO-011",
+    "age": 71,
+    "sex": "M",
+    "chief_complaint": "Fiebre y tos; en otro centro le recetaron claritromicina",
+    "symptoms": [
+      "fiebre de 38,4 °C",
+      "tos productiva",
+      "disnea leve"
+    ],
+    "medical_history": [
+      "fibrilación auricular",
+      "dislipidemia",
+      "diabetes mellitus tipo 2"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "warfarina",
+        "dose": "5 mg cada 24 h"
+      },
+      {
+        "name": "atorvastatina",
+        "dose": "40 mg cada 24 h"
+      },
+      {
+        "name": "claritromicina",
+        "dose": "500 mg cada 12 h"
+      },
+      {
+        "name": "metformina",
+        "dose": "850 mg cada 12 h"
+      }
+    ],
+    "lab_results": {
+      "heart_rate_bpm": 96,
+      "systolic_bp_mmhg": 126,
+      "spo2_pct": 94,
+      "wbc_mm3": 13100,
+      "crp_mg_l": 88,
+      "inr": 2.8,
+      "egfr_ml_min": 64
+    }
+  },
+  "expected": {
+    "type": "polypharmacy",
+    "test_cases": [
+      "CP02",
+      "CP03"
+    ],
+    "primary_diagnosis": {
+      "icd10": "J18.9",
+      "name": "Neumonía adquirida en la comunidad"
+    },
+    "acceptable_diagnoses": [
+      "J18",
+      "J18.9",
+      "J15.9",
+      "J13"
+    ],
+    "interactions": [
+      {
+        "drugs": [
+          "claritromicina",
+          "warfarina"
+        ],
+        "severity": "severe"
+      },
+      {
+        "drugs": [
+          "atorvastatina",
+          "claritromicina"
+        ],
+        "severity": "severe"
+      }
+    ],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_nac",
+      "gpc_fa"
+    ],
+    "key_points": [
+      "Con comorbilidad de riesgo: amoxicilina/ácido clavulánico es la primera opción",
+      "Evitar claritromicina por sus interacciones"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_nac, gpc_fa"
+  }
+}

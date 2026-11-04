@@ -1,0 +1,59 @@
+{
+  "case": {
+    "case_id": "CASO-006",
+    "age": 45,
+    "sex": "F",
+    "chief_complaint": "Fiebre, tos con flema y dolor en el costado derecho al respirar",
+    "symptoms": [
+      "fiebre de 38,6 °C",
+      "tos productiva",
+      "dolor torácico pleurítico",
+      "crepitantes en base derecha"
+    ],
+    "medical_history": [],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "paracetamol",
+        "dose": "1 g cada 8 h"
+      }
+    ],
+    "lab_results": {
+      "heart_rate_bpm": 98,
+      "systolic_bp_mmhg": 118,
+      "diastolic_bp_mmhg": 74,
+      "spo2_pct": 95,
+      "wbc_mm3": 14200,
+      "crp_mg_l": 96
+    }
+  },
+  "expected": {
+    "type": "common",
+    "test_cases": [
+      "CP04"
+    ],
+    "primary_diagnosis": {
+      "icd10": "J18.9",
+      "name": "Neumonía, no especificada"
+    },
+    "acceptable_diagnoses": [
+      "J18",
+      "J18.1",
+      "J18.9",
+      "J13",
+      "J15.9"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_nac"
+    ],
+    "key_points": [
+      "CRB-65 = 0: manejo ambulatorio",
+      "Sin comorbilidad: amoxicilina 1 g c/8 h",
+      "Curso corto (≤ 5 días) y reevaluar a las 48–72 h"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_nac"
+  }
+}

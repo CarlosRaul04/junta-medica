@@ -1,0 +1,79 @@
+{
+  "case": {
+    "case_id": "CASO-007",
+    "age": 74,
+    "sex": "F",
+    "chief_complaint": "Moretones y sangrado de encías desde que toma pastillas para el dolor de rodilla",
+    "symptoms": [
+      "equimosis en brazos",
+      "gingivorragia",
+      "dolor de rodilla"
+    ],
+    "medical_history": [
+      "fibrilación auricular",
+      "hipertensión arterial",
+      "artrosis de rodilla"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "warfarina",
+        "dose": "5 mg cada 24 h"
+      },
+      {
+        "name": "ibuprofeno",
+        "dose": "400 mg cada 8 h"
+      },
+      {
+        "name": "bisoprolol",
+        "dose": "5 mg cada 24 h"
+      },
+      {
+        "name": "omeprazol",
+        "dose": "20 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "inr": 4.1,
+      "hemoglobin_g_dl": 11.2,
+      "heart_rate_bpm": 74,
+      "creatinine_mg_dl": 1.0,
+      "egfr_ml_min": 58
+    }
+  },
+  "expected": {
+    "type": "polypharmacy",
+    "test_cases": [
+      "CP02",
+      "CP03"
+    ],
+    "primary_diagnosis": {
+      "icd10": "I48.9",
+      "name": "Fibrilación auricular anticoagulada con sobreanticoagulación"
+    },
+    "acceptable_diagnoses": [
+      "I48",
+      "I48.9",
+      "D68.3"
+    ],
+    "interactions": [
+      {
+        "drugs": [
+          "warfarina",
+          "ibuprofeno"
+        ],
+        "severity": "severe"
+      }
+    ],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_fa"
+    ],
+    "key_points": [
+      "Suspender el AINE; analgesia con paracetamol",
+      "INR fuera de rango: ajustar warfarina"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_fa"
+  }
+}

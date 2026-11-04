@@ -1,0 +1,67 @@
+{
+  "case": {
+    "case_id": "CASO-013",
+    "age": 84,
+    "sex": "M",
+    "chief_complaint": "Desde ayer está confundido y se cayó en casa; no tiene fiebre",
+    "symptoms": [
+      "confusión aguda",
+      "caída",
+      "tos escasa",
+      "taquipnea",
+      "sin fiebre"
+    ],
+    "medical_history": [
+      "hipertensión arterial",
+      "diabetes mellitus tipo 2"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "amlodipino",
+        "dose": "5 mg cada 24 h"
+      },
+      {
+        "name": "metformina",
+        "dose": "850 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "heart_rate_bpm": 104,
+      "systolic_bp_mmhg": 96,
+      "diastolic_bp_mmhg": 58,
+      "spo2_pct": 89,
+      "wbc_mm3": 11800,
+      "crp_mg_l": 140,
+      "egfr_ml_min": 55
+    }
+  },
+  "expected": {
+    "type": "atypical",
+    "test_cases": [
+      "CP05"
+    ],
+    "primary_diagnosis": {
+      "icd10": "J18.9",
+      "name": "Neumonía en adulto mayor sin fiebre"
+    },
+    "acceptable_diagnoses": [
+      "J18",
+      "J18.9",
+      "J15.9",
+      "J13",
+      "J69.0"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_nac"
+    ],
+    "key_points": [
+      "En adultos mayores la NAC puede presentarse sin fiebre, con confusión",
+      "CRB-65 ≥ 2 (confusión, edad, PA): manejo hospitalario"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_nac"
+  }
+}

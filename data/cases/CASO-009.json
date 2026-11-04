@@ -1,0 +1,94 @@
+{
+  "case": {
+    "case_id": "CASO-009",
+    "age": 79,
+    "sex": "F",
+    "chief_complaint": "Náuseas, ve todo amarillo y el pulso está lento",
+    "symptoms": [
+      "náuseas",
+      "vómitos",
+      "visión amarillenta",
+      "bradicardia",
+      "confusión leve"
+    ],
+    "medical_history": [
+      "fibrilación auricular",
+      "insuficiencia cardiaca crónica"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "digoxina",
+        "dose": "0,25 mg cada 24 h"
+      },
+      {
+        "name": "amiodarona",
+        "dose": "200 mg cada 24 h"
+      },
+      {
+        "name": "warfarina",
+        "dose": "2,5 mg cada 24 h"
+      },
+      {
+        "name": "furosemida",
+        "dose": "40 mg cada 12 h"
+      }
+    ],
+    "lab_results": {
+      "potassium_meq_l": 3.1,
+      "heart_rate_bpm": 46,
+      "creatinine_mg_dl": 1.4,
+      "egfr_ml_min": 38,
+      "inr": 3.6
+    }
+  },
+  "expected": {
+    "type": "polypharmacy",
+    "test_cases": [
+      "CP02",
+      "CP03"
+    ],
+    "primary_diagnosis": {
+      "icd10": "T46.0",
+      "name": "Intoxicación digitálica"
+    },
+    "acceptable_diagnoses": [
+      "T46.0",
+      "I48",
+      "I48.9",
+      "E87.6",
+      "R00.1"
+    ],
+    "interactions": [
+      {
+        "drugs": [
+          "amiodarona",
+          "digoxina"
+        ],
+        "severity": "severe"
+      },
+      {
+        "drugs": [
+          "amiodarona",
+          "warfarina"
+        ],
+        "severity": "severe"
+      }
+    ],
+    "condition_alerts": [
+      "RC27",
+      "RC28"
+    ],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_fa",
+      "gpc_ic"
+    ],
+    "key_points": [
+      "Suspender digoxina y medir digoxinemia",
+      "Corregir hipopotasemia",
+      "La amiodarona eleva digoxina y el efecto de la warfarina"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_fa, gpc_ic"
+  }
+}

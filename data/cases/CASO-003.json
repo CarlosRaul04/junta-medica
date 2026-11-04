@@ -1,0 +1,74 @@
+{
+  "case": {
+    "case_id": "CASO-003",
+    "age": 70,
+    "sex": "M",
+    "chief_complaint": "Falta de aire progresiva al caminar y no puede dormir echado",
+    "symptoms": [
+      "disnea de esfuerzo",
+      "ortopnea",
+      "edema de miembros inferiores",
+      "fatiga"
+    ],
+    "medical_history": [
+      "hipertensión arterial",
+      "infarto de miocardio hace 3 años"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "enalapril",
+        "dose": "10 mg cada 12 h"
+      },
+      {
+        "name": "furosemida",
+        "dose": "40 mg cada 24 h"
+      },
+      {
+        "name": "ácido acetilsalicílico",
+        "dose": "100 mg cada 24 h"
+      },
+      {
+        "name": "atorvastatina",
+        "dose": "40 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "lvef_pct": 32,
+      "creatinine_mg_dl": 1.1,
+      "egfr_ml_min": 68,
+      "potassium_meq_l": 4.4,
+      "sodium_meq_l": 137,
+      "systolic_bp_mmhg": 118,
+      "heart_rate_bpm": 88
+    }
+  },
+  "expected": {
+    "type": "common",
+    "test_cases": [
+      "CP04"
+    ],
+    "primary_diagnosis": {
+      "icd10": "I50.0",
+      "name": "Insuficiencia cardíaca congestiva (FEVI reducida)"
+    },
+    "acceptable_diagnoses": [
+      "I50",
+      "I50.0",
+      "I50.1",
+      "I50.9",
+      "I25.5"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_ic"
+    ],
+    "key_points": [
+      "FEVI ≤ 40 %: completar terapia con betabloqueador, ARM e iSGLT2 según la guía",
+      "Considerar cambiar IECA por sacubitrilo/valsartán"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_ic"
+  }
+}

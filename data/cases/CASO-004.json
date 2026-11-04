@@ -1,0 +1,64 @@
+{
+  "case": {
+    "case_id": "CASO-004",
+    "age": 68,
+    "sex": "F",
+    "chief_complaint": "Palpitaciones rápidas e irregulares desde hace dos semanas",
+    "symptoms": [
+      "palpitaciones",
+      "disnea leve",
+      "cansancio"
+    ],
+    "medical_history": [
+      "hipertensión arterial",
+      "diabetes mellitus tipo 2"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "losartán",
+        "dose": "50 mg cada 12 h"
+      },
+      {
+        "name": "metformina",
+        "dose": "850 mg cada 12 h"
+      }
+    ],
+    "lab_results": {
+      "heart_rate_bpm": 126,
+      "systolic_bp_mmhg": 134,
+      "diastolic_bp_mmhg": 82,
+      "lvef_pct": 55,
+      "creatinine_mg_dl": 0.9,
+      "egfr_ml_min": 70,
+      "potassium_meq_l": 4.1
+    }
+  },
+  "expected": {
+    "type": "common",
+    "test_cases": [
+      "CP04"
+    ],
+    "primary_diagnosis": {
+      "icd10": "I48.9",
+      "name": "Fibrilación auricular no especificada"
+    },
+    "acceptable_diagnoses": [
+      "I48",
+      "I48.0",
+      "I48.1",
+      "I48.9"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_fa"
+    ],
+    "key_points": [
+      "Control de frecuencia (betabloqueador o calcioantagonista no dihidropiridínico)",
+      "Anticoagulación: CHA2DS2-VASc ≥ 3 en mujer (HTA, DM, edad 65–74)"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_fa"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "case": {
+    "case_id": "CASO-014",
+    "age": 81,
+    "sex": "F",
+    "chief_complaint": "Tos seca por las noches y mucho cansancio; los pies se le hinchan",
+    "symptoms": [
+      "tos nocturna",
+      "fatiga",
+      "edema maleolar",
+      "disminución de la tolerancia al ejercicio"
+    ],
+    "medical_history": [
+      "hipertensión arterial de larga data",
+      "obesidad"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "hidroclorotiazida",
+        "dose": "25 mg cada 24 h"
+      },
+      {
+        "name": "amlodipino",
+        "dose": "10 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "lvef_pct": 58,
+      "systolic_bp_mmhg": 152,
+      "heart_rate_bpm": 84,
+      "creatinine_mg_dl": 1.0,
+      "egfr_ml_min": 60,
+      "potassium_meq_l": 3.9
+    }
+  },
+  "expected": {
+    "type": "atypical",
+    "test_cases": [
+      "CP05"
+    ],
+    "primary_diagnosis": {
+      "icd10": "I50.9",
+      "name": "Insuficiencia cardiaca con FEVI preservada"
+    },
+    "acceptable_diagnoses": [
+      "I50",
+      "I50.0",
+      "I50.9",
+      "I11.0"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_ic",
+      "gpc_hta"
+    ],
+    "key_points": [
+      "FEVI ≥ 50 %: iSGLT2 y diurético para congestión",
+      "Controlar la presión arterial",
+      "El amlodipino puede causar edema (diferencial)"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_ic, gpc_hta"
+  }
+}

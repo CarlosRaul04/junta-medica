@@ -1,0 +1,89 @@
+{
+  "case": {
+    "case_id": "CASO-012",
+    "age": 82,
+    "sex": "F",
+    "chief_complaint": "Sangrado al orinar y dolor articular",
+    "symptoms": [
+      "hematuria",
+      "dolor de rodillas",
+      "fatiga"
+    ],
+    "medical_history": [
+      "fibrilación auricular",
+      "artrosis",
+      "enfermedad renal crónica"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "Pradaxa",
+        "dose": "150 mg cada 12 h"
+      },
+      {
+        "name": "Voltaren",
+        "dose": "50 mg cada 8 h"
+      },
+      {
+        "name": "amiodarona",
+        "dose": "200 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "creatinine_mg_dl": 1.9,
+      "egfr_ml_min": 27,
+      "hemoglobin_g_dl": 10.4,
+      "heart_rate_bpm": 70
+    }
+  },
+  "expected": {
+    "type": "polypharmacy",
+    "test_cases": [
+      "CP02",
+      "CP03"
+    ],
+    "primary_diagnosis": {
+      "icd10": "I48.9",
+      "name": "FA anticoagulada con sangrado (dabigatrán con ERC grave)"
+    },
+    "acceptable_diagnoses": [
+      "I48",
+      "I48.9",
+      "N18.4",
+      "R31",
+      "D68.3"
+    ],
+    "interactions": [
+      {
+        "drugs": [
+          "dabigatrán",
+          "diclofenaco"
+        ],
+        "severity": "moderate"
+      },
+      {
+        "drugs": [
+          "amiodarona",
+          "dabigatrán"
+        ],
+        "severity": "moderate"
+      }
+    ],
+    "condition_alerts": [
+      "RC18",
+      "RC20",
+      "RC35"
+    ],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_fa",
+      "gpc_erc"
+    ],
+    "key_points": [
+      "Dabigatrán contraindicado con ACr < 30: cambiar anticoagulante",
+      "Suspender diclofenaco",
+      "Nombres comerciales: debe reconocer Pradaxa y Voltaren"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_fa, gpc_erc"
+  }
+}

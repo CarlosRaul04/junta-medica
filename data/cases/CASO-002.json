@@ -1,0 +1,59 @@
+{
+  "case": {
+    "case_id": "CASO-002",
+    "age": 52,
+    "sex": "F",
+    "chief_complaint": "Sed intensa, orina mucho y bajó de peso en dos meses",
+    "symptoms": [
+      "polidipsia",
+      "poliuria",
+      "pérdida de peso de 4 kg",
+      "visión borrosa"
+    ],
+    "medical_history": [
+      "obesidad",
+      "madre con diabetes"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "omeprazol",
+        "dose": "20 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "glucose_mg_dl": 246,
+      "hba1c_pct": 9.2,
+      "creatinine_mg_dl": 0.8,
+      "egfr_ml_min": 88,
+      "systolic_bp_mmhg": 128,
+      "diastolic_bp_mmhg": 80
+    }
+  },
+  "expected": {
+    "type": "common",
+    "test_cases": [
+      "CP04"
+    ],
+    "primary_diagnosis": {
+      "icd10": "E11.9",
+      "name": "Diabetes mellitus tipo 2 sin mención de complicación"
+    },
+    "acceptable_diagnoses": [
+      "E11",
+      "E11.9",
+      "E14.9"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_dm2"
+    ],
+    "key_points": [
+      "HbA1c > 8,5 % con síntomas: valorar terapia combinada o insulina según la guía",
+      "Metformina como base si no hay contraindicación"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_dm2"
+  }
+}

@@ -1,0 +1,26 @@
+drug_a,drug_b,severity,source,page,note
+dabigatrán,warfarina,severe,ft_dabigatran,84,Contraindicado: tratamiento concomitante con otro anticoagulante.
+amiodarona,dabigatrán,moderate,ft_dabigatran,90,Inhibidor de la gp-P: aumenta la exposición a dabigatrán (precaución).
+claritromicina,dabigatrán,moderate,ft_dabigatran,91,Inhibidor de la gp-P: aumenta la exposición a dabigatrán (precaución).
+dabigatrán,ácido acetilsalicílico,moderate,ft_dabigatran,92,Aproximadamente duplica la hemorragia grave.
+dabigatrán,ibuprofeno,moderate,ft_dabigatran,92,AINE crónico: aumenta el riesgo de hemorragia ~50 %.
+dabigatrán,naproxeno,moderate,ft_dabigatran,92,AINE crónico: aumenta el riesgo de hemorragia ~50 %.
+dabigatrán,diclofenaco,moderate,ft_dabigatran,92,AINE crónico: aumenta el riesgo de hemorragia ~50 %.
+claritromicina,finerenona,severe,ft_finerenona,9,Contraindicado: inhibidor fuerte del CYP3A4.
+espironolactona,finerenona,severe,ft_finerenona,10,No se debe usar con otro ARM: riesgo de hiperpotasemia.
+eplerenona,finerenona,severe,ft_finerenona,10,No se debe usar con otro ARM: riesgo de hiperpotasemia.
+gliclazida,insulina,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+gliclazida,metformina,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+gliclazida,pioglitazona,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+gliclazida,liraglutida,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+carvedilol,gliclazida,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+bisoprolol,gliclazida,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+captopril,gliclazida,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+enalapril,gliclazida,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+claritromicina,gliclazida,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+gliclazida,ibuprofeno,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+gliclazida,naproxeno,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+diclofenaco,gliclazida,moderate,ft_gliclazida,5,Puede potenciar el efecto hipoglucemiante. Monitorizar la glucemia.
+gliclazida,prednisona,moderate,ft_gliclazida,5,Los glucocorticoides aumentan la glucemia. Monitorizar la glucemia.
+gliclazida,levofloxacino,moderate,ft_gliclazida,5,Fluoroquinolonas: alteraciones de la glucemia (hipo o hiperglucemia). Monitorizar la glucemia.
+gliclazida,warfarina,moderate,ft_gliclazida,6,Las sulfonilureas pueden potenciar el efecto anticoagulante.

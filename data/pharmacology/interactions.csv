@@ -1,0 +1,712 @@
+drug_a,drug_b,severity,source,source_id
+alopurinol,amiodarona,unknown,DDInter,DDInter48-DDInter76
+alopurinol,amlodipino,unknown,DDInter,DDInter79-DDInter48
+alopurinol,amoxicilina,mild,DDInter,DDInter48-DDInter83
+alopurinol,amoxicilina/ácido clavulánico,mild,DDInter,DDInter48-DDInter83
+alopurinol,ampicilina/sulbactam,mild,DDInter,DDInter89-DDInter48
+alopurinol,atorvastatina,unknown,DDInter,DDInter48-DDInter133
+alopurinol,azitromicina,unknown,DDInter,DDInter157-DDInter48
+alopurinol,bisoprolol,unknown,DDInter,DDInter48-DDInter216
+alopurinol,captopril,severe,DDInter,DDInter48-DDInter292
+alopurinol,carvedilol,unknown,DDInter,DDInter48-DDInter305
+alopurinol,ceftriaxona,unknown,DDInter,DDInter48-DDInter334
+alopurinol,cefuroxima,unknown,DDInter,DDInter48-DDInter335
+alopurinol,claritromicina,unknown,DDInter,DDInter48-DDInter393
+alopurinol,diclofenaco,unknown,DDInter,DDInter48-DDInter537
+alopurinol,digoxina,unknown,DDInter,DDInter554-DDInter48
+alopurinol,diltiazem,unknown,DDInter,DDInter561-DDInter48
+alopurinol,doxiciclina,unknown,DDInter,DDInter598-DDInter48
+alopurinol,enalapril,severe,DDInter,DDInter48-DDInter638
+alopurinol,eplerenona,unknown,DDInter,DDInter48-DDInter656
+alopurinol,espironolactona,unknown,DDInter,DDInter1707-DDInter48
+alopurinol,furosemida,unknown,DDInter,DDInter48-DDInter790
+alopurinol,glibenclamida,unknown,DDInter,DDInter48-DDInter831
+alopurinol,hidroclorotiazida,moderate,DDInter,DDInter48-DDInter883
+alopurinol,ibuprofeno,unknown,DDInter,DDInter48-DDInter900
+alopurinol,losartán,unknown,DDInter,DDInter48-DDInter1095
+alopurinol,metformina,unknown,DDInter,DDInter1164-DDInter48
+alopurinol,naproxeno,unknown,DDInter,DDInter48-DDInter1266
+alopurinol,omeprazol,unknown,DDInter,DDInter1340-DDInter48
+alopurinol,paracetamol,unknown,DDInter,DDInter14-DDInter48
+alopurinol,pioglitazona,unknown,DDInter,DDInter48-DDInter1472
+alopurinol,prednisona,unknown,DDInter,DDInter48-DDInter1515
+alopurinol,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter48
+alopurinol,valsartán,unknown,DDInter,DDInter1915-DDInter48
+alopurinol,warfarina,moderate,DDInter,DDInter48-DDInter1951
+alopurinol,ácido acetilsalicílico,unknown,DDInter,DDInter48-DDInter20
+amiodarona,amlodipino,unknown,DDInter,DDInter79-DDInter76
+amiodarona,amoxicilina,unknown,DDInter,DDInter83-DDInter76
+amiodarona,amoxicilina/ácido clavulánico,unknown,DDInter,DDInter83-DDInter76
+amiodarona,atorvastatina,moderate,DDInter,DDInter133-DDInter76
+amiodarona,azitromicina,severe,DDInter,DDInter157-DDInter76
+amiodarona,bisoprolol,moderate,DDInter,DDInter216-DDInter76
+amiodarona,captopril,unknown,DDInter,DDInter76-DDInter292
+amiodarona,carvedilol,moderate,DDInter,DDInter76-DDInter305
+amiodarona,ceftriaxona,unknown,DDInter,DDInter76-DDInter334
+amiodarona,cefuroxima,unknown,DDInter,DDInter335-DDInter76
+amiodarona,claritromicina,severe,DDInter,DDInter76-DDInter393
+amiodarona,dabigatrán,moderate,ft_dabigatran,p90
+amiodarona,diclofenaco,moderate,DDInter,DDInter537-DDInter76
+amiodarona,digoxina,severe,DDInter,DDInter554-DDInter76
+amiodarona,diltiazem,severe,DDInter,DDInter561-DDInter76
+amiodarona,doxiciclina,unknown,DDInter,DDInter598-DDInter76
+amiodarona,enalapril,unknown,DDInter,DDInter638-DDInter76
+amiodarona,eplerenona,severe,DDInter,DDInter656-DDInter76
+amiodarona,espironolactona,unknown,DDInter,DDInter1707-DDInter76
+amiodarona,furosemida,severe,DDInter,DDInter790-DDInter76
+amiodarona,glibenclamida,unknown,DDInter,DDInter831-DDInter76
+amiodarona,hidroclorotiazida,severe,DDInter,DDInter883-DDInter76
+amiodarona,ibuprofeno,unknown,DDInter,DDInter900-DDInter76
+amiodarona,ivabradina,severe,DDInter,DDInter76-DDInter996
+amiodarona,levofloxacino,severe,DDInter,DDInter76-DDInter1055
+amiodarona,losartán,unknown,DDInter,DDInter1095-DDInter76
+amiodarona,metformina,unknown,DDInter,DDInter1164-DDInter76
+amiodarona,naproxeno,unknown,DDInter,DDInter1266-DDInter76
+amiodarona,omeprazol,unknown,DDInter,DDInter1340-DDInter76
+amiodarona,paracetamol,unknown,DDInter,DDInter14-DDInter76
+amiodarona,pioglitazona,unknown,DDInter,DDInter76-DDInter1472
+amiodarona,prednisona,unknown,DDInter,DDInter1515-DDInter76
+amiodarona,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter76
+amiodarona,valsartán,unknown,DDInter,DDInter1915-DDInter76
+amiodarona,warfarina,severe,DDInter,DDInter1951-DDInter76
+amiodarona,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter76
+amlodipino,amoxicilina,unknown,DDInter,DDInter79-DDInter83
+amlodipino,amoxicilina/ácido clavulánico,unknown,DDInter,DDInter79-DDInter83
+amlodipino,ampicilina/sulbactam,unknown,DDInter,DDInter79-DDInter89
+amlodipino,atorvastatina,moderate,DDInter,DDInter79-DDInter133
+amlodipino,azitromicina,unknown,DDInter,DDInter157-DDInter79
+amlodipino,bisoprolol,moderate,DDInter,DDInter79-DDInter216
+amlodipino,captopril,mild,DDInter,DDInter79-DDInter292
+amlodipino,carvedilol,moderate,DDInter,DDInter79-DDInter305
+amlodipino,ceftriaxona,unknown,DDInter,DDInter79-DDInter334
+amlodipino,cefuroxima,unknown,DDInter,DDInter79-DDInter335
+amlodipino,claritromicina,moderate,DDInter,DDInter79-DDInter393
+amlodipino,dapagliflozina,moderate,DDInter,DDInter79-DDInter474
+amlodipino,diclofenaco,moderate,DDInter,DDInter79-DDInter537
+amlodipino,digoxina,unknown,DDInter,DDInter79-DDInter554
+amlodipino,diltiazem,moderate,DDInter,DDInter561-DDInter79
+amlodipino,doxiciclina,unknown,DDInter,DDInter598-DDInter79
+amlodipino,empagliflozina,moderate,DDInter,DDInter79-DDInter636
+amlodipino,enalapril,mild,DDInter,DDInter79-DDInter638
+amlodipino,eplerenona,unknown,DDInter,DDInter79-DDInter656
+amlodipino,espironolactona,unknown,DDInter,DDInter79-DDInter1707
+amlodipino,furosemida,unknown,DDInter,DDInter79-DDInter790
+amlodipino,glibenclamida,unknown,DDInter,DDInter79-DDInter831
+amlodipino,hidroclorotiazida,mild,DDInter,DDInter79-DDInter883
+amlodipino,ibuprofeno,moderate,DDInter,DDInter79-DDInter900
+amlodipino,ivabradina,moderate,DDInter,DDInter79-DDInter996
+amlodipino,losartán,unknown,DDInter,DDInter79-DDInter1095
+amlodipino,metformina,unknown,DDInter,DDInter1164-DDInter79
+amlodipino,naproxeno,moderate,DDInter,DDInter79-DDInter1266
+amlodipino,omeprazol,unknown,DDInter,DDInter1340-DDInter79
+amlodipino,paracetamol,unknown,DDInter,DDInter14-DDInter79
+amlodipino,pioglitazona,unknown,DDInter,DDInter79-DDInter1472
+amlodipino,prednisona,moderate,DDInter,DDInter79-DDInter1515
+amlodipino,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter79
+amlodipino,valsartán,unknown,DDInter,DDInter1915-DDInter79
+amlodipino,warfarina,unknown,DDInter,DDInter79-DDInter1951
+amlodipino,ácido acetilsalicílico,moderate,DDInter,DDInter79-DDInter20
+amoxicilina,ampicilina/sulbactam,unknown,DDInter,DDInter89-DDInter83
+amoxicilina,atorvastatina,unknown,DDInter,DDInter83-DDInter133
+amoxicilina,azitromicina,mild,DDInter,DDInter157-DDInter83
+amoxicilina,bisoprolol,unknown,DDInter,DDInter216-DDInter83
+amoxicilina,captopril,unknown,DDInter,DDInter83-DDInter292
+amoxicilina,carvedilol,unknown,DDInter,DDInter83-DDInter305
+amoxicilina,ceftriaxona,unknown,DDInter,DDInter83-DDInter334
+amoxicilina,cefuroxima,unknown,DDInter,DDInter83-DDInter335
+amoxicilina,claritromicina,mild,DDInter,DDInter83-DDInter393
+amoxicilina,diclofenaco,unknown,DDInter,DDInter537-DDInter83
+amoxicilina,digoxina,unknown,DDInter,DDInter554-DDInter83
+amoxicilina,diltiazem,unknown,DDInter,DDInter561-DDInter83
+amoxicilina,doxiciclina,moderate,DDInter,DDInter598-DDInter83
+amoxicilina,enalapril,unknown,DDInter,DDInter638-DDInter83
+amoxicilina,espironolactona,unknown,DDInter,DDInter1707-DDInter83
+amoxicilina,furosemida,unknown,DDInter,DDInter790-DDInter83
+amoxicilina,glibenclamida,unknown,DDInter,DDInter831-DDInter83
+amoxicilina,hidroclorotiazida,unknown,DDInter,DDInter883-DDInter83
+amoxicilina,ibuprofeno,unknown,DDInter,DDInter900-DDInter83
+amoxicilina,losartán,unknown,DDInter,DDInter1095-DDInter83
+amoxicilina,metformina,unknown,DDInter,DDInter1164-DDInter83
+amoxicilina,naproxeno,unknown,DDInter,DDInter1266-DDInter83
+amoxicilina,omeprazol,unknown,DDInter,DDInter1340-DDInter83
+amoxicilina,paracetamol,unknown,DDInter,DDInter14-DDInter83
+amoxicilina,pioglitazona,unknown,DDInter,DDInter83-DDInter1472
+amoxicilina,prednisona,unknown,DDInter,DDInter1515-DDInter83
+amoxicilina,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter83
+amoxicilina,valsartán,unknown,DDInter,DDInter1915-DDInter83
+amoxicilina,warfarina,moderate,DDInter,DDInter1951-DDInter83
+amoxicilina,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter83
+amoxicilina/ácido clavulánico,ampicilina/sulbactam,unknown,DDInter,DDInter89-DDInter83
+amoxicilina/ácido clavulánico,atorvastatina,unknown,DDInter,DDInter83-DDInter133
+amoxicilina/ácido clavulánico,azitromicina,mild,DDInter,DDInter157-DDInter83
+amoxicilina/ácido clavulánico,bisoprolol,unknown,DDInter,DDInter216-DDInter83
+amoxicilina/ácido clavulánico,captopril,unknown,DDInter,DDInter83-DDInter292
+amoxicilina/ácido clavulánico,carvedilol,unknown,DDInter,DDInter83-DDInter305
+amoxicilina/ácido clavulánico,ceftriaxona,unknown,DDInter,DDInter83-DDInter334
+amoxicilina/ácido clavulánico,cefuroxima,unknown,DDInter,DDInter83-DDInter335
+amoxicilina/ácido clavulánico,claritromicina,mild,DDInter,DDInter83-DDInter393
+amoxicilina/ácido clavulánico,diclofenaco,unknown,DDInter,DDInter537-DDInter83
+amoxicilina/ácido clavulánico,digoxina,unknown,DDInter,DDInter554-DDInter83
+amoxicilina/ácido clavulánico,diltiazem,unknown,DDInter,DDInter561-DDInter83
+amoxicilina/ácido clavulánico,doxiciclina,moderate,DDInter,DDInter598-DDInter83
+amoxicilina/ácido clavulánico,enalapril,unknown,DDInter,DDInter638-DDInter83
+amoxicilina/ácido clavulánico,espironolactona,unknown,DDInter,DDInter1707-DDInter83
+amoxicilina/ácido clavulánico,furosemida,unknown,DDInter,DDInter790-DDInter83
+amoxicilina/ácido clavulánico,glibenclamida,unknown,DDInter,DDInter831-DDInter83
+amoxicilina/ácido clavulánico,hidroclorotiazida,unknown,DDInter,DDInter883-DDInter83
+amoxicilina/ácido clavulánico,ibuprofeno,unknown,DDInter,DDInter900-DDInter83
+amoxicilina/ácido clavulánico,losartán,unknown,DDInter,DDInter1095-DDInter83
+amoxicilina/ácido clavulánico,metformina,unknown,DDInter,DDInter1164-DDInter83
+amoxicilina/ácido clavulánico,naproxeno,unknown,DDInter,DDInter1266-DDInter83
+amoxicilina/ácido clavulánico,omeprazol,unknown,DDInter,DDInter1340-DDInter83
+amoxicilina/ácido clavulánico,paracetamol,unknown,DDInter,DDInter14-DDInter83
+amoxicilina/ácido clavulánico,pioglitazona,unknown,DDInter,DDInter83-DDInter1472
+amoxicilina/ácido clavulánico,prednisona,unknown,DDInter,DDInter1515-DDInter83
+amoxicilina/ácido clavulánico,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter83
+amoxicilina/ácido clavulánico,valsartán,unknown,DDInter,DDInter1915-DDInter83
+amoxicilina/ácido clavulánico,warfarina,moderate,DDInter,DDInter1951-DDInter83
+amoxicilina/ácido clavulánico,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter83
+ampicilina/sulbactam,atorvastatina,unknown,DDInter,DDInter89-DDInter133
+ampicilina/sulbactam,azitromicina,mild,DDInter,DDInter157-DDInter89
+ampicilina/sulbactam,ceftriaxona,unknown,DDInter,DDInter89-DDInter334
+ampicilina/sulbactam,claritromicina,mild,DDInter,DDInter89-DDInter393
+ampicilina/sulbactam,digoxina,unknown,DDInter,DDInter554-DDInter89
+ampicilina/sulbactam,doxiciclina,moderate,DDInter,DDInter598-DDInter89
+ampicilina/sulbactam,furosemida,unknown,DDInter,DDInter89-DDInter790
+ampicilina/sulbactam,ibuprofeno,unknown,DDInter,DDInter89-DDInter900
+ampicilina/sulbactam,naproxeno,unknown,DDInter,DDInter89-DDInter1266
+ampicilina/sulbactam,omeprazol,unknown,DDInter,DDInter1340-DDInter89
+ampicilina/sulbactam,paracetamol,unknown,DDInter,DDInter14-DDInter89
+ampicilina/sulbactam,prednisona,unknown,DDInter,DDInter89-DDInter1515
+ampicilina/sulbactam,warfarina,moderate,DDInter,DDInter89-DDInter1951
+ampicilina/sulbactam,ácido acetilsalicílico,unknown,DDInter,DDInter89-DDInter20
+atorvastatina,azitromicina,moderate,DDInter,DDInter157-DDInter133
+atorvastatina,bisoprolol,unknown,DDInter,DDInter216-DDInter133
+atorvastatina,captopril,unknown,DDInter,DDInter133-DDInter292
+atorvastatina,carvedilol,unknown,DDInter,DDInter133-DDInter305
+atorvastatina,ceftriaxona,unknown,DDInter,DDInter133-DDInter334
+atorvastatina,cefuroxima,unknown,DDInter,DDInter133-DDInter335
+atorvastatina,claritromicina,severe,DDInter,DDInter133-DDInter393
+atorvastatina,diclofenaco,unknown,DDInter,DDInter537-DDInter133
+atorvastatina,digoxina,moderate,DDInter,DDInter554-DDInter133
+atorvastatina,diltiazem,moderate,DDInter,DDInter561-DDInter133
+atorvastatina,doxiciclina,unknown,DDInter,DDInter598-DDInter133
+atorvastatina,enalapril,unknown,DDInter,DDInter638-DDInter133
+atorvastatina,eplerenona,unknown,DDInter,DDInter656-DDInter133
+atorvastatina,espironolactona,unknown,DDInter,DDInter1707-DDInter133
+atorvastatina,furosemida,unknown,DDInter,DDInter790-DDInter133
+atorvastatina,glibenclamida,unknown,DDInter,DDInter831-DDInter133
+atorvastatina,hidroclorotiazida,unknown,DDInter,DDInter883-DDInter133
+atorvastatina,ibuprofeno,unknown,DDInter,DDInter900-DDInter133
+atorvastatina,liraglutida,mild,DDInter,DDInter133-DDInter1077
+atorvastatina,losartán,unknown,DDInter,DDInter1095-DDInter133
+atorvastatina,metformina,unknown,DDInter,DDInter1164-DDInter133
+atorvastatina,naproxeno,unknown,DDInter,DDInter1266-DDInter133
+atorvastatina,omeprazol,moderate,DDInter,DDInter1340-DDInter133
+atorvastatina,paracetamol,unknown,DDInter,DDInter14-DDInter133
+atorvastatina,pioglitazona,unknown,DDInter,DDInter133-DDInter1472
+atorvastatina,prednisona,unknown,DDInter,DDInter1515-DDInter133
+atorvastatina,sacubitrilo/valsartán,moderate,DDInter,DDInter133-DDInter1630
+atorvastatina,valsartán,unknown,DDInter,DDInter1915-DDInter133
+atorvastatina,warfarina,mild,DDInter,DDInter1951-DDInter133
+atorvastatina,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter133
+azitromicina,captopril,unknown,DDInter,DDInter157-DDInter292
+azitromicina,carvedilol,unknown,DDInter,DDInter157-DDInter305
+azitromicina,ceftriaxona,unknown,DDInter,DDInter157-DDInter334
+azitromicina,cefuroxima,unknown,DDInter,DDInter157-DDInter335
+azitromicina,claritromicina,moderate,DDInter,DDInter157-DDInter393
+azitromicina,diclofenaco,unknown,DDInter,DDInter157-DDInter537
+azitromicina,digoxina,moderate,DDInter,DDInter157-DDInter554
+azitromicina,diltiazem,unknown,DDInter,DDInter157-DDInter561
+azitromicina,doxiciclina,unknown,DDInter,DDInter157-DDInter598
+azitromicina,enalapril,unknown,DDInter,DDInter157-DDInter638
+azitromicina,espironolactona,unknown,DDInter,DDInter157-DDInter1707
+azitromicina,furosemida,unknown,DDInter,DDInter157-DDInter790
+azitromicina,glibenclamida,unknown,DDInter,DDInter157-DDInter831
+azitromicina,hidroclorotiazida,unknown,DDInter,DDInter157-DDInter883
+azitromicina,ibuprofeno,unknown,DDInter,DDInter157-DDInter900
+azitromicina,ivabradina,severe,DDInter,DDInter157-DDInter996
+azitromicina,levofloxacino,moderate,DDInter,DDInter157-DDInter1055
+azitromicina,losartán,unknown,DDInter,DDInter157-DDInter1095
+azitromicina,metformina,unknown,DDInter,DDInter157-DDInter1164
+azitromicina,naproxeno,unknown,DDInter,DDInter157-DDInter1266
+azitromicina,omeprazol,unknown,DDInter,DDInter157-DDInter1340
+azitromicina,paracetamol,unknown,DDInter,DDInter157-DDInter14
+azitromicina,pioglitazona,unknown,DDInter,DDInter157-DDInter1472
+azitromicina,prednisona,unknown,DDInter,DDInter157-DDInter1515
+azitromicina,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter157
+azitromicina,valsartán,unknown,DDInter,DDInter1915-DDInter157
+azitromicina,warfarina,moderate,DDInter,DDInter157-DDInter1951
+azitromicina,ácido acetilsalicílico,unknown,DDInter,DDInter157-DDInter20
+bisoprolol,captopril,unknown,DDInter,DDInter216-DDInter292
+bisoprolol,carvedilol,unknown,DDInter,DDInter216-DDInter305
+bisoprolol,ceftriaxona,unknown,DDInter,DDInter216-DDInter334
+bisoprolol,claritromicina,unknown,DDInter,DDInter216-DDInter393
+bisoprolol,dapagliflozina,moderate,DDInter,DDInter216-DDInter474
+bisoprolol,diclofenaco,moderate,DDInter,DDInter537-DDInter216
+bisoprolol,digoxina,moderate,DDInter,DDInter554-DDInter216
+bisoprolol,diltiazem,severe,DDInter,DDInter561-DDInter216
+bisoprolol,empagliflozina,moderate,DDInter,DDInter216-DDInter636
+bisoprolol,enalapril,unknown,DDInter,DDInter638-DDInter216
+bisoprolol,eplerenona,unknown,DDInter,DDInter216-DDInter656
+bisoprolol,espironolactona,moderate,DDInter,DDInter1707-DDInter216
+bisoprolol,furosemida,moderate,DDInter,DDInter216-DDInter790
+bisoprolol,glibenclamida,moderate,DDInter,DDInter216-DDInter831
+bisoprolol,gliclazida,moderate,ft_gliclazida,p5
+bisoprolol,hidroclorotiazida,moderate,DDInter,DDInter216-DDInter883
+bisoprolol,ibuprofeno,moderate,DDInter,DDInter216-DDInter900
+bisoprolol,insulina,moderate,DDInter,DDInter934-DDInter216
+bisoprolol,ivabradina,moderate,DDInter,DDInter216-DDInter996
+bisoprolol,losartán,unknown,DDInter,DDInter216-DDInter1095
+bisoprolol,metformina,unknown,DDInter,DDInter1164-DDInter216
+bisoprolol,naproxeno,moderate,DDInter,DDInter216-DDInter1266
+bisoprolol,omeprazol,unknown,DDInter,DDInter1340-DDInter216
+bisoprolol,paracetamol,unknown,DDInter,DDInter14-DDInter216
+bisoprolol,pioglitazona,unknown,DDInter,DDInter216-DDInter1472
+bisoprolol,prednisona,moderate,DDInter,DDInter216-DDInter1515
+bisoprolol,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter216
+bisoprolol,valsartán,moderate,DDInter,DDInter1915-DDInter216
+bisoprolol,warfarina,unknown,DDInter,DDInter216-DDInter1951
+bisoprolol,ácido acetilsalicílico,mild,DDInter,DDInter216-DDInter20
+captopril,carvedilol,unknown,DDInter,DDInter305-DDInter292
+captopril,ceftriaxona,unknown,DDInter,DDInter292-DDInter334
+captopril,cefuroxima,unknown,DDInter,DDInter335-DDInter292
+captopril,claritromicina,unknown,DDInter,DDInter292-DDInter393
+captopril,dapagliflozina,moderate,DDInter,DDInter292-DDInter474
+captopril,diclofenaco,moderate,DDInter,DDInter537-DDInter292
+captopril,digoxina,moderate,DDInter,DDInter554-DDInter292
+captopril,diltiazem,mild,DDInter,DDInter561-DDInter292
+captopril,doxiciclina,unknown,DDInter,DDInter598-DDInter292
+captopril,empagliflozina,moderate,DDInter,DDInter292-DDInter636
+captopril,enalapril,unknown,DDInter,DDInter638-DDInter292
+captopril,eplerenona,moderate,DDInter,DDInter656-DDInter292
+captopril,espironolactona,severe,DDInter,DDInter1707-DDInter292
+captopril,furosemida,moderate,DDInter,DDInter790-DDInter292
+captopril,glibenclamida,moderate,DDInter,DDInter831-DDInter292
+captopril,gliclazida,moderate,ft_gliclazida,p5
+captopril,hidroclorotiazida,moderate,DDInter,DDInter883-DDInter292
+captopril,ibuprofeno,moderate,DDInter,DDInter900-DDInter292
+captopril,insulina,moderate,DDInter,DDInter934-DDInter292
+captopril,losartán,severe,DDInter,DDInter1095-DDInter292
+captopril,metformina,moderate,DDInter,DDInter1164-DDInter292
+captopril,naproxeno,moderate,DDInter,DDInter1266-DDInter292
+captopril,omeprazol,unknown,DDInter,DDInter1340-DDInter292
+captopril,paracetamol,unknown,DDInter,DDInter14-DDInter292
+captopril,pioglitazona,unknown,DDInter,DDInter1472-DDInter292
+captopril,prednisona,moderate,DDInter,DDInter1515-DDInter292
+captopril,sacubitrilo/valsartán,severe,DDInter,DDInter1915-DDInter292
+captopril,valsartán,severe,DDInter,DDInter1915-DDInter292
+captopril,warfarina,unknown,DDInter,DDInter1951-DDInter292
+captopril,ácido acetilsalicílico,moderate,DDInter,DDInter20-DDInter292
+carvedilol,ceftriaxona,unknown,DDInter,DDInter305-DDInter334
+carvedilol,cefuroxima,unknown,DDInter,DDInter335-DDInter305
+carvedilol,claritromicina,unknown,DDInter,DDInter305-DDInter393
+carvedilol,dapagliflozina,moderate,DDInter,DDInter305-DDInter474
+carvedilol,diclofenaco,moderate,DDInter,DDInter537-DDInter305
+carvedilol,digoxina,moderate,DDInter,DDInter554-DDInter305
+carvedilol,diltiazem,severe,DDInter,DDInter561-DDInter305
+carvedilol,doxiciclina,unknown,DDInter,DDInter598-DDInter305
+carvedilol,empagliflozina,moderate,DDInter,DDInter305-DDInter636
+carvedilol,enalapril,unknown,DDInter,DDInter638-DDInter305
+carvedilol,eplerenona,unknown,DDInter,DDInter656-DDInter305
+carvedilol,espironolactona,moderate,DDInter,DDInter1707-DDInter305
+carvedilol,furosemida,moderate,DDInter,DDInter790-DDInter305
+carvedilol,glibenclamida,moderate,DDInter,DDInter831-DDInter305
+carvedilol,gliclazida,moderate,ft_gliclazida,p5
+carvedilol,hidroclorotiazida,moderate,DDInter,DDInter883-DDInter305
+carvedilol,ibuprofeno,moderate,DDInter,DDInter900-DDInter305
+carvedilol,insulina,moderate,DDInter,DDInter934-DDInter305
+carvedilol,ivabradina,moderate,DDInter,DDInter305-DDInter996
+carvedilol,losartán,unknown,DDInter,DDInter1095-DDInter305
+carvedilol,metformina,unknown,DDInter,DDInter1164-DDInter305
+carvedilol,naproxeno,moderate,DDInter,DDInter1266-DDInter305
+carvedilol,omeprazol,unknown,DDInter,DDInter1340-DDInter305
+carvedilol,paracetamol,unknown,DDInter,DDInter14-DDInter305
+carvedilol,pioglitazona,unknown,DDInter,DDInter1472-DDInter305
+carvedilol,prednisona,moderate,DDInter,DDInter1515-DDInter305
+carvedilol,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter305
+carvedilol,valsartán,moderate,DDInter,DDInter1915-DDInter305
+carvedilol,warfarina,unknown,DDInter,DDInter1951-DDInter305
+carvedilol,ácido acetilsalicílico,mild,DDInter,DDInter20-DDInter305
+ceftriaxona,cefuroxima,unknown,DDInter,DDInter335-DDInter334
+ceftriaxona,claritromicina,unknown,DDInter,DDInter393-DDInter334
+ceftriaxona,diclofenaco,mild,DDInter,DDInter537-DDInter334
+ceftriaxona,digoxina,unknown,DDInter,DDInter554-DDInter334
+ceftriaxona,diltiazem,unknown,DDInter,DDInter561-DDInter334
+ceftriaxona,doxiciclina,unknown,DDInter,DDInter598-DDInter334
+ceftriaxona,enalapril,unknown,DDInter,DDInter638-DDInter334
+ceftriaxona,espironolactona,unknown,DDInter,DDInter1707-DDInter334
+ceftriaxona,furosemida,moderate,DDInter,DDInter790-DDInter334
+ceftriaxona,glibenclamida,unknown,DDInter,DDInter831-DDInter334
+ceftriaxona,hidroclorotiazida,unknown,DDInter,DDInter883-DDInter334
+ceftriaxona,ibuprofeno,unknown,DDInter,DDInter900-DDInter334
+ceftriaxona,losartán,unknown,DDInter,DDInter1095-DDInter334
+ceftriaxona,metformina,unknown,DDInter,DDInter1164-DDInter334
+ceftriaxona,naproxeno,unknown,DDInter,DDInter1266-DDInter334
+ceftriaxona,omeprazol,unknown,DDInter,DDInter1340-DDInter334
+ceftriaxona,paracetamol,unknown,DDInter,DDInter14-DDInter334
+ceftriaxona,pioglitazona,unknown,DDInter,DDInter1472-DDInter334
+ceftriaxona,prednisona,unknown,DDInter,DDInter1515-DDInter334
+ceftriaxona,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter334
+ceftriaxona,valsartán,unknown,DDInter,DDInter1915-DDInter334
+ceftriaxona,warfarina,moderate,DDInter,DDInter1951-DDInter334
+ceftriaxona,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter334
+cefuroxima,claritromicina,unknown,DDInter,DDInter335-DDInter393
+cefuroxima,diclofenaco,unknown,DDInter,DDInter537-DDInter335
+cefuroxima,digoxina,unknown,DDInter,DDInter554-DDInter335
+cefuroxima,diltiazem,unknown,DDInter,DDInter561-DDInter335
+cefuroxima,doxiciclina,unknown,DDInter,DDInter598-DDInter335
+cefuroxima,enalapril,unknown,DDInter,DDInter638-DDInter335
+cefuroxima,espironolactona,unknown,DDInter,DDInter1707-DDInter335
+cefuroxima,furosemida,moderate,DDInter,DDInter790-DDInter335
+cefuroxima,glibenclamida,unknown,DDInter,DDInter831-DDInter335
+cefuroxima,hidroclorotiazida,unknown,DDInter,DDInter883-DDInter335
+cefuroxima,ibuprofeno,unknown,DDInter,DDInter900-DDInter335
+cefuroxima,losartán,unknown,DDInter,DDInter1095-DDInter335
+cefuroxima,metformina,unknown,DDInter,DDInter1164-DDInter335
+cefuroxima,naproxeno,unknown,DDInter,DDInter1266-DDInter335
+cefuroxima,omeprazol,moderate,DDInter,DDInter1340-DDInter335
+cefuroxima,paracetamol,unknown,DDInter,DDInter14-DDInter335
+cefuroxima,pioglitazona,unknown,DDInter,DDInter335-DDInter1472
+cefuroxima,prednisona,unknown,DDInter,DDInter1515-DDInter335
+cefuroxima,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter335
+cefuroxima,valsartán,unknown,DDInter,DDInter1915-DDInter335
+cefuroxima,warfarina,moderate,DDInter,DDInter1951-DDInter335
+cefuroxima,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter335
+claritromicina,dabigatrán,moderate,ft_dabigatran,p91
+claritromicina,dapagliflozina,moderate,DDInter,DDInter393-DDInter474
+claritromicina,diclofenaco,unknown,DDInter,DDInter537-DDInter393
+claritromicina,digoxina,severe,DDInter,DDInter554-DDInter393
+claritromicina,diltiazem,moderate,DDInter,DDInter561-DDInter393
+claritromicina,doxiciclina,unknown,DDInter,DDInter598-DDInter393
+claritromicina,empagliflozina,moderate,DDInter,DDInter393-DDInter636
+claritromicina,enalapril,unknown,DDInter,DDInter638-DDInter393
+claritromicina,eplerenona,severe,DDInter,DDInter656-DDInter393
+claritromicina,espironolactona,unknown,DDInter,DDInter1707-DDInter393
+claritromicina,finerenona,severe,ft_finerenona,p9
+claritromicina,furosemida,unknown,DDInter,DDInter790-DDInter393
+claritromicina,glibenclamida,moderate,DDInter,DDInter831-DDInter393
+claritromicina,gliclazida,moderate,ft_gliclazida,p5
+claritromicina,hidroclorotiazida,unknown,DDInter,DDInter883-DDInter393
+claritromicina,ibuprofeno,unknown,DDInter,DDInter900-DDInter393
+claritromicina,insulina,moderate,DDInter,DDInter934-DDInter393
+claritromicina,ivabradina,severe,DDInter,DDInter393-DDInter996
+claritromicina,levofloxacino,moderate,DDInter,DDInter1055-DDInter393
+claritromicina,liraglutida,moderate,DDInter,DDInter393-DDInter1077
+claritromicina,losartán,unknown,DDInter,DDInter1095-DDInter393
+claritromicina,metformina,moderate,DDInter,DDInter1164-DDInter393
+claritromicina,naproxeno,unknown,DDInter,DDInter1266-DDInter393
+claritromicina,omeprazol,mild,DDInter,DDInter1340-DDInter393
+claritromicina,paracetamol,unknown,DDInter,DDInter14-DDInter393
+claritromicina,pioglitazona,moderate,DDInter,DDInter1472-DDInter393
+claritromicina,prednisona,moderate,DDInter,DDInter1515-DDInter393
+claritromicina,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter393
+claritromicina,valsartán,unknown,DDInter,DDInter1915-DDInter393
+claritromicina,warfarina,severe,DDInter,DDInter1951-DDInter393
+claritromicina,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter393
+dabigatrán,diclofenaco,moderate,ft_dabigatran,p92
+dabigatrán,ibuprofeno,moderate,ft_dabigatran,p92
+dabigatrán,naproxeno,moderate,ft_dabigatran,p92
+dabigatrán,warfarina,severe,ft_dabigatran,p84
+dabigatrán,ácido acetilsalicílico,moderate,ft_dabigatran,p92
+dapagliflozina,diltiazem,moderate,DDInter,DDInter561-DDInter474
+dapagliflozina,enalapril,moderate,DDInter,DDInter638-DDInter474
+dapagliflozina,eplerenona,moderate,DDInter,DDInter656-DDInter474
+dapagliflozina,espironolactona,moderate,DDInter,DDInter1707-DDInter474
+dapagliflozina,furosemida,moderate,DDInter,DDInter790-DDInter474
+dapagliflozina,glibenclamida,moderate,DDInter,DDInter831-DDInter474
+dapagliflozina,hidroclorotiazida,moderate,DDInter,DDInter883-DDInter474
+dapagliflozina,insulina,moderate,DDInter,DDInter934-DDInter474
+dapagliflozina,levofloxacino,moderate,DDInter,DDInter1055-DDInter474
+dapagliflozina,losartán,moderate,DDInter,DDInter1095-DDInter474
+dapagliflozina,prednisona,moderate,DDInter,DDInter1515-DDInter474
+dapagliflozina,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter474
+dapagliflozina,valsartán,moderate,DDInter,DDInter1915-DDInter474
+diclofenaco,digoxina,moderate,DDInter,DDInter554-DDInter537
+diclofenaco,diltiazem,moderate,DDInter,DDInter561-DDInter537
+diclofenaco,doxiciclina,unknown,DDInter,DDInter598-DDInter537
+diclofenaco,enalapril,moderate,DDInter,DDInter638-DDInter537
+diclofenaco,eplerenona,moderate,DDInter,DDInter537-DDInter656
+diclofenaco,espironolactona,moderate,DDInter,DDInter1707-DDInter537
+diclofenaco,furosemida,moderate,DDInter,DDInter537-DDInter790
+diclofenaco,glibenclamida,moderate,DDInter,DDInter537-DDInter831
+diclofenaco,gliclazida,moderate,ft_gliclazida,p5
+diclofenaco,hidroclorotiazida,moderate,DDInter,DDInter537-DDInter883
+diclofenaco,ibuprofeno,moderate,DDInter,DDInter537-DDInter900
+diclofenaco,levofloxacino,moderate,DDInter,DDInter537-DDInter1055
+diclofenaco,losartán,moderate,DDInter,DDInter537-DDInter1095
+diclofenaco,metformina,moderate,DDInter,DDInter1164-DDInter537
+diclofenaco,naproxeno,moderate,DDInter,DDInter537-DDInter1266
+diclofenaco,omeprazol,unknown,DDInter,DDInter1340-DDInter537
+diclofenaco,paracetamol,unknown,DDInter,DDInter14-DDInter537
+diclofenaco,pioglitazona,unknown,DDInter,DDInter537-DDInter1472
+diclofenaco,prednisona,moderate,DDInter,DDInter537-DDInter1515
+diclofenaco,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter537
+diclofenaco,valsartán,moderate,DDInter,DDInter1915-DDInter537
+diclofenaco,warfarina,severe,DDInter,DDInter537-DDInter1951
+diclofenaco,ácido acetilsalicílico,moderate,DDInter,DDInter537-DDInter20
+digoxina,diltiazem,moderate,DDInter,DDInter561-DDInter554
+digoxina,doxiciclina,moderate,DDInter,DDInter598-DDInter554
+digoxina,enalapril,moderate,DDInter,DDInter554-DDInter638
+digoxina,eplerenona,unknown,DDInter,DDInter554-DDInter656
+digoxina,espironolactona,mild,DDInter,DDInter554-DDInter1707
+digoxina,furosemida,moderate,DDInter,DDInter554-DDInter790
+digoxina,glibenclamida,unknown,DDInter,DDInter554-DDInter831
+digoxina,hidroclorotiazida,moderate,DDInter,DDInter554-DDInter883
+digoxina,ibuprofeno,moderate,DDInter,DDInter554-DDInter900
+digoxina,ivabradina,moderate,DDInter,DDInter554-DDInter996
+digoxina,liraglutida,mild,DDInter,DDInter554-DDInter1077
+digoxina,losartán,unknown,DDInter,DDInter554-DDInter1095
+digoxina,metformina,moderate,DDInter,DDInter1164-DDInter554
+digoxina,naproxeno,moderate,DDInter,DDInter554-DDInter1266
+digoxina,omeprazol,moderate,DDInter,DDInter1340-DDInter554
+digoxina,paracetamol,unknown,DDInter,DDInter14-DDInter554
+digoxina,pioglitazona,unknown,DDInter,DDInter554-DDInter1472
+digoxina,prednisona,moderate,DDInter,DDInter554-DDInter1515
+digoxina,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter554
+digoxina,valsartán,unknown,DDInter,DDInter1915-DDInter554
+digoxina,warfarina,unknown,DDInter,DDInter554-DDInter1951
+digoxina,ácido acetilsalicílico,moderate,DDInter,DDInter554-DDInter20
+diltiazem,doxiciclina,unknown,DDInter,DDInter598-DDInter561
+diltiazem,empagliflozina,moderate,DDInter,DDInter561-DDInter636
+diltiazem,enalapril,mild,DDInter,DDInter561-DDInter638
+diltiazem,eplerenona,severe,DDInter,DDInter561-DDInter656
+diltiazem,espironolactona,unknown,DDInter,DDInter561-DDInter1707
+diltiazem,furosemida,unknown,DDInter,DDInter561-DDInter790
+diltiazem,glibenclamida,unknown,DDInter,DDInter561-DDInter831
+diltiazem,hidroclorotiazida,unknown,DDInter,DDInter561-DDInter883
+diltiazem,ibuprofeno,moderate,DDInter,DDInter561-DDInter900
+diltiazem,insulina,mild,DDInter,DDInter934-DDInter561
+diltiazem,ivabradina,severe,DDInter,DDInter561-DDInter996
+diltiazem,losartán,unknown,DDInter,DDInter561-DDInter1095
+diltiazem,metformina,unknown,DDInter,DDInter1164-DDInter561
+diltiazem,naproxeno,moderate,DDInter,DDInter561-DDInter1266
+diltiazem,omeprazol,unknown,DDInter,DDInter1340-DDInter561
+diltiazem,paracetamol,unknown,DDInter,DDInter14-DDInter561
+diltiazem,pioglitazona,moderate,DDInter,DDInter561-DDInter1472
+diltiazem,prednisona,moderate,DDInter,DDInter561-DDInter1515
+diltiazem,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter561
+diltiazem,valsartán,unknown,DDInter,DDInter1915-DDInter561
+diltiazem,warfarina,unknown,DDInter,DDInter561-DDInter1951
+diltiazem,ácido acetilsalicílico,moderate,DDInter,DDInter561-DDInter20
+doxiciclina,enalapril,unknown,DDInter,DDInter598-DDInter638
+doxiciclina,espironolactona,mild,DDInter,DDInter598-DDInter1707
+doxiciclina,furosemida,mild,DDInter,DDInter598-DDInter790
+doxiciclina,glibenclamida,unknown,DDInter,DDInter598-DDInter831
+doxiciclina,hidroclorotiazida,mild,DDInter,DDInter598-DDInter883
+doxiciclina,ibuprofeno,unknown,DDInter,DDInter598-DDInter900
+doxiciclina,insulina,moderate,DDInter,DDInter934-DDInter598
+doxiciclina,losartán,unknown,DDInter,DDInter598-DDInter1095
+doxiciclina,metformina,unknown,DDInter,DDInter598-DDInter1164
+doxiciclina,naproxeno,unknown,DDInter,DDInter598-DDInter1266
+doxiciclina,omeprazol,unknown,DDInter,DDInter598-DDInter1340
+doxiciclina,paracetamol,unknown,DDInter,DDInter598-DDInter14
+doxiciclina,pioglitazona,unknown,DDInter,DDInter598-DDInter1472
+doxiciclina,prednisona,unknown,DDInter,DDInter598-DDInter1515
+doxiciclina,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter598
+doxiciclina,valsartán,unknown,DDInter,DDInter1915-DDInter598
+doxiciclina,warfarina,moderate,DDInter,DDInter598-DDInter1951
+doxiciclina,ácido acetilsalicílico,unknown,DDInter,DDInter598-DDInter20
+empagliflozina,enalapril,moderate,DDInter,DDInter638-DDInter636
+empagliflozina,eplerenona,moderate,DDInter,DDInter656-DDInter636
+empagliflozina,espironolactona,moderate,DDInter,DDInter1707-DDInter636
+empagliflozina,furosemida,moderate,DDInter,DDInter790-DDInter636
+empagliflozina,glibenclamida,moderate,DDInter,DDInter831-DDInter636
+empagliflozina,hidroclorotiazida,moderate,DDInter,DDInter883-DDInter636
+empagliflozina,insulina,moderate,DDInter,DDInter934-DDInter636
+empagliflozina,levofloxacino,moderate,DDInter,DDInter1055-DDInter636
+empagliflozina,losartán,moderate,DDInter,DDInter1095-DDInter636
+empagliflozina,prednisona,moderate,DDInter,DDInter1515-DDInter636
+empagliflozina,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter636
+empagliflozina,valsartán,moderate,DDInter,DDInter1915-DDInter636
+enalapril,eplerenona,moderate,DDInter,DDInter638-DDInter656
+enalapril,espironolactona,severe,DDInter,DDInter1707-DDInter638
+enalapril,furosemida,moderate,DDInter,DDInter638-DDInter790
+enalapril,glibenclamida,moderate,DDInter,DDInter638-DDInter831
+enalapril,gliclazida,moderate,ft_gliclazida,p5
+enalapril,hidroclorotiazida,moderate,DDInter,DDInter638-DDInter883
+enalapril,ibuprofeno,moderate,DDInter,DDInter638-DDInter900
+enalapril,insulina,moderate,DDInter,DDInter934-DDInter638
+enalapril,losartán,severe,DDInter,DDInter638-DDInter1095
+enalapril,metformina,moderate,DDInter,DDInter1164-DDInter638
+enalapril,naproxeno,moderate,DDInter,DDInter638-DDInter1266
+enalapril,omeprazol,unknown,DDInter,DDInter1340-DDInter638
+enalapril,paracetamol,unknown,DDInter,DDInter14-DDInter638
+enalapril,pioglitazona,unknown,DDInter,DDInter638-DDInter1472
+enalapril,prednisona,moderate,DDInter,DDInter638-DDInter1515
+enalapril,sacubitrilo/valsartán,severe,DDInter,DDInter1915-DDInter638
+enalapril,valsartán,severe,DDInter,DDInter1915-DDInter638
+enalapril,warfarina,unknown,DDInter,DDInter638-DDInter1951
+enalapril,ácido acetilsalicílico,moderate,DDInter,DDInter638-DDInter20
+eplerenona,espironolactona,severe,DDInter,DDInter1707-DDInter656
+eplerenona,finerenona,severe,ft_finerenona,p10
+eplerenona,furosemida,unknown,DDInter,DDInter790-DDInter656
+eplerenona,hidroclorotiazida,unknown,DDInter,DDInter656-DDInter883
+eplerenona,ibuprofeno,moderate,DDInter,DDInter656-DDInter900
+eplerenona,losartán,moderate,DDInter,DDInter1095-DDInter656
+eplerenona,metformina,unknown,DDInter,DDInter1164-DDInter656
+eplerenona,naproxeno,moderate,DDInter,DDInter656-DDInter1266
+eplerenona,omeprazol,unknown,DDInter,DDInter1340-DDInter656
+eplerenona,paracetamol,unknown,DDInter,DDInter14-DDInter656
+eplerenona,pioglitazona,unknown,DDInter,DDInter656-DDInter1472
+eplerenona,prednisona,moderate,DDInter,DDInter1515-DDInter656
+eplerenona,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter656
+eplerenona,valsartán,moderate,DDInter,DDInter1915-DDInter656
+eplerenona,warfarina,unknown,DDInter,DDInter1951-DDInter656
+eplerenona,ácido acetilsalicílico,moderate,DDInter,DDInter656-DDInter20
+espironolactona,finerenona,severe,ft_finerenona,p10
+espironolactona,furosemida,unknown,DDInter,DDInter1707-DDInter790
+espironolactona,glibenclamida,unknown,DDInter,DDInter1707-DDInter831
+espironolactona,hidroclorotiazida,unknown,DDInter,DDInter1707-DDInter883
+espironolactona,ibuprofeno,moderate,DDInter,DDInter1707-DDInter900
+espironolactona,losartán,severe,DDInter,DDInter1707-DDInter1095
+espironolactona,metformina,moderate,DDInter,DDInter1164-DDInter1707
+espironolactona,naproxeno,moderate,DDInter,DDInter1707-DDInter1266
+espironolactona,omeprazol,unknown,DDInter,DDInter1340-DDInter1707
+espironolactona,paracetamol,unknown,DDInter,DDInter14-DDInter1707
+espironolactona,pioglitazona,unknown,DDInter,DDInter1707-DDInter1472
+espironolactona,prednisona,moderate,DDInter,DDInter1707-DDInter1515
+espironolactona,sacubitrilo/valsartán,severe,DDInter,DDInter1915-DDInter1707
+espironolactona,valsartán,severe,DDInter,DDInter1915-DDInter1707
+espironolactona,warfarina,mild,DDInter,DDInter1707-DDInter1951
+espironolactona,ácido acetilsalicílico,mild,DDInter,DDInter1707-DDInter20
+furosemida,glibenclamida,moderate,DDInter,DDInter790-DDInter831
+furosemida,hidroclorotiazida,moderate,DDInter,DDInter790-DDInter883
+furosemida,ibuprofeno,moderate,DDInter,DDInter790-DDInter900
+furosemida,insulina,moderate,DDInter,DDInter932-DDInter790
+furosemida,liraglutida,moderate,DDInter,DDInter790-DDInter1077
+furosemida,losartán,unknown,DDInter,DDInter1095-DDInter790
+furosemida,metformina,moderate,DDInter,DDInter1164-DDInter790
+furosemida,naproxeno,moderate,DDInter,DDInter790-DDInter1266
+furosemida,omeprazol,moderate,DDInter,DDInter1340-DDInter790
+furosemida,paracetamol,unknown,DDInter,DDInter14-DDInter790
+furosemida,pioglitazona,moderate,DDInter,DDInter790-DDInter1472
+furosemida,prednisona,moderate,DDInter,DDInter1515-DDInter790
+furosemida,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter790
+furosemida,valsartán,unknown,DDInter,DDInter1915-DDInter790
+furosemida,warfarina,unknown,DDInter,DDInter1951-DDInter790
+furosemida,ácido acetilsalicílico,mild,DDInter,DDInter790-DDInter20
+glibenclamida,hidroclorotiazida,moderate,DDInter,DDInter883-DDInter831
+glibenclamida,ibuprofeno,moderate,DDInter,DDInter831-DDInter900
+glibenclamida,insulina,moderate,DDInter,DDInter932-DDInter831
+glibenclamida,levofloxacino,severe,DDInter,DDInter831-DDInter1055
+glibenclamida,liraglutida,moderate,DDInter,DDInter831-DDInter1077
+glibenclamida,losartán,unknown,DDInter,DDInter1095-DDInter831
+glibenclamida,metformina,moderate,DDInter,DDInter1164-DDInter831
+glibenclamida,naproxeno,moderate,DDInter,DDInter1266-DDInter831
+glibenclamida,omeprazol,mild,DDInter,DDInter1340-DDInter831
+glibenclamida,paracetamol,unknown,DDInter,DDInter14-DDInter831
+glibenclamida,pioglitazona,unknown,DDInter,DDInter831-DDInter1472
+glibenclamida,prednisona,moderate,DDInter,DDInter1515-DDInter831
+glibenclamida,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter831
+glibenclamida,valsartán,unknown,DDInter,DDInter1915-DDInter831
+glibenclamida,warfarina,moderate,DDInter,DDInter1951-DDInter831
+glibenclamida,ácido acetilsalicílico,moderate,DDInter,DDInter20-DDInter831
+gliclazida,ibuprofeno,moderate,ft_gliclazida,p5
+gliclazida,insulina,moderate,ft_gliclazida,p5
+gliclazida,levofloxacino,moderate,ft_gliclazida,p5
+gliclazida,liraglutida,moderate,ft_gliclazida,p5
+gliclazida,metformina,moderate,ft_gliclazida,p5
+gliclazida,naproxeno,moderate,ft_gliclazida,p5
+gliclazida,pioglitazona,moderate,ft_gliclazida,p5
+gliclazida,prednisona,moderate,ft_gliclazida,p5
+gliclazida,warfarina,moderate,ft_gliclazida,p6
+hidroclorotiazida,ibuprofeno,moderate,DDInter,DDInter883-DDInter900
+hidroclorotiazida,insulina,moderate,DDInter,DDInter934-DDInter883
+hidroclorotiazida,liraglutida,moderate,DDInter,DDInter883-DDInter1077
+hidroclorotiazida,losartán,unknown,DDInter,DDInter1095-DDInter883
+hidroclorotiazida,metformina,moderate,DDInter,DDInter1164-DDInter883
+hidroclorotiazida,naproxeno,moderate,DDInter,DDInter1266-DDInter883
+hidroclorotiazida,omeprazol,moderate,DDInter,DDInter1340-DDInter883
+hidroclorotiazida,paracetamol,unknown,DDInter,DDInter14-DDInter883
+hidroclorotiazida,pioglitazona,moderate,DDInter,DDInter883-DDInter1472
+hidroclorotiazida,prednisona,moderate,DDInter,DDInter1515-DDInter883
+hidroclorotiazida,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter883
+hidroclorotiazida,valsartán,unknown,DDInter,DDInter1915-DDInter883
+hidroclorotiazida,warfarina,mild,DDInter,DDInter1951-DDInter883
+hidroclorotiazida,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter883
+ibuprofeno,levofloxacino,moderate,DDInter,DDInter900-DDInter1055
+ibuprofeno,losartán,moderate,DDInter,DDInter1095-DDInter900
+ibuprofeno,metformina,moderate,DDInter,DDInter1164-DDInter900
+ibuprofeno,naproxeno,moderate,DDInter,DDInter1266-DDInter900
+ibuprofeno,omeprazol,unknown,DDInter,DDInter1340-DDInter900
+ibuprofeno,paracetamol,unknown,DDInter,DDInter14-DDInter900
+ibuprofeno,pioglitazona,unknown,DDInter,DDInter900-DDInter1472
+ibuprofeno,prednisona,moderate,DDInter,DDInter1515-DDInter900
+ibuprofeno,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter900
+ibuprofeno,valsartán,moderate,DDInter,DDInter1915-DDInter900
+ibuprofeno,warfarina,severe,DDInter,DDInter1951-DDInter900
+ibuprofeno,ácido acetilsalicílico,severe,DDInter,DDInter20-DDInter900
+insulina,levofloxacino,severe,DDInter,DDInter932-DDInter1055
+insulina,liraglutida,moderate,DDInter,DDInter934-DDInter1077
+insulina,losartán,moderate,DDInter,DDInter932-DDInter1095
+insulina,metformina,moderate,DDInter,DDInter934-DDInter1164
+insulina,pioglitazona,moderate,DDInter,DDInter934-DDInter1472
+insulina,prednisona,moderate,DDInter,DDInter932-DDInter1515
+insulina,sacubitrilo/valsartán,moderate,DDInter,DDInter934-DDInter1915
+insulina,valsartán,moderate,DDInter,DDInter934-DDInter1915
+insulina,ácido acetilsalicílico,moderate,DDInter,DDInter934-DDInter20
+ivabradina,levofloxacino,severe,DDInter,DDInter1055-DDInter996
+levofloxacino,liraglutida,moderate,DDInter,DDInter1055-DDInter1077
+levofloxacino,metformina,moderate,DDInter,DDInter1164-DDInter1055
+levofloxacino,naproxeno,moderate,DDInter,DDInter1266-DDInter1055
+levofloxacino,pioglitazona,moderate,DDInter,DDInter1472-DDInter1055
+levofloxacino,prednisona,severe,DDInter,DDInter1515-DDInter1055
+levofloxacino,warfarina,severe,DDInter,DDInter1951-DDInter1055
+levofloxacino,ácido acetilsalicílico,moderate,DDInter,DDInter20-DDInter1055
+liraglutida,paracetamol,mild,DDInter,DDInter14-DDInter1077
+liraglutida,prednisona,moderate,DDInter,DDInter1515-DDInter1077
+losartán,metformina,unknown,DDInter,DDInter1164-DDInter1095
+losartán,naproxeno,moderate,DDInter,DDInter1095-DDInter1266
+losartán,omeprazol,unknown,DDInter,DDInter1340-DDInter1095
+losartán,paracetamol,unknown,DDInter,DDInter14-DDInter1095
+losartán,pioglitazona,unknown,DDInter,DDInter1095-DDInter1472
+losartán,prednisona,moderate,DDInter,DDInter1515-DDInter1095
+losartán,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter1095
+losartán,valsartán,unknown,DDInter,DDInter1915-DDInter1095
+losartán,warfarina,unknown,DDInter,DDInter1095-DDInter1951
+losartán,ácido acetilsalicílico,moderate,DDInter,DDInter1095-DDInter20
+metformina,naproxeno,moderate,DDInter,DDInter1164-DDInter1266
+metformina,omeprazol,unknown,DDInter,DDInter1164-DDInter1340
+metformina,paracetamol,unknown,DDInter,DDInter14-DDInter1164
+metformina,pioglitazona,unknown,DDInter,DDInter1164-DDInter1472
+metformina,prednisona,moderate,DDInter,DDInter1164-DDInter1515
+metformina,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter1164
+metformina,valsartán,unknown,DDInter,DDInter1915-DDInter1164
+metformina,warfarina,moderate,DDInter,DDInter1164-DDInter1951
+metformina,ácido acetilsalicílico,unknown,DDInter,DDInter1164-DDInter20
+naproxeno,omeprazol,moderate,DDInter,DDInter1340-DDInter1266
+naproxeno,paracetamol,unknown,DDInter,DDInter14-DDInter1266
+naproxeno,pioglitazona,unknown,DDInter,DDInter1266-DDInter1472
+naproxeno,prednisona,moderate,DDInter,DDInter1515-DDInter1266
+naproxeno,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter1266
+naproxeno,valsartán,moderate,DDInter,DDInter1915-DDInter1266
+naproxeno,warfarina,severe,DDInter,DDInter1951-DDInter1266
+naproxeno,ácido acetilsalicílico,moderate,DDInter,DDInter1266-DDInter20
+omeprazol,paracetamol,unknown,DDInter,DDInter14-DDInter1340
+omeprazol,pioglitazona,unknown,DDInter,DDInter1340-DDInter1472
+omeprazol,prednisona,unknown,DDInter,DDInter1340-DDInter1515
+omeprazol,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter1340
+omeprazol,valsartán,unknown,DDInter,DDInter1915-DDInter1340
+omeprazol,warfarina,moderate,DDInter,DDInter1340-DDInter1951
+omeprazol,ácido acetilsalicílico,mild,DDInter,DDInter1340-DDInter20
+paracetamol,pioglitazona,unknown,DDInter,DDInter14-DDInter1472
+paracetamol,prednisona,unknown,DDInter,DDInter14-DDInter1515
+paracetamol,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter14
+paracetamol,valsartán,unknown,DDInter,DDInter1915-DDInter14
+paracetamol,warfarina,moderate,DDInter,DDInter14-DDInter1951
+paracetamol,ácido acetilsalicílico,unknown,DDInter,DDInter14-DDInter20
+pioglitazona,prednisona,moderate,DDInter,DDInter1515-DDInter1472
+pioglitazona,sacubitrilo/valsartán,unknown,DDInter,DDInter1915-DDInter1472
+pioglitazona,valsartán,unknown,DDInter,DDInter1915-DDInter1472
+pioglitazona,warfarina,unknown,DDInter,DDInter1951-DDInter1472
+pioglitazona,ácido acetilsalicílico,unknown,DDInter,DDInter20-DDInter1472
+prednisona,sacubitrilo/valsartán,moderate,DDInter,DDInter1915-DDInter1515
+prednisona,valsartán,moderate,DDInter,DDInter1915-DDInter1515
+prednisona,warfarina,moderate,DDInter,DDInter1515-DDInter1951
+prednisona,ácido acetilsalicílico,moderate,DDInter,DDInter1515-DDInter20
+sacubitrilo/valsartán,warfarina,unknown,DDInter,DDInter1915-DDInter1951
+sacubitrilo/valsartán,ácido acetilsalicílico,moderate,DDInter,DDInter1915-DDInter20
+valsartán,warfarina,unknown,DDInter,DDInter1915-DDInter1951
+valsartán,ácido acetilsalicílico,moderate,DDInter,DDInter1915-DDInter20
+warfarina,ácido acetilsalicílico,severe,DDInter,DDInter1951-DDInter20

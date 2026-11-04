@@ -1,0 +1,64 @@
+{
+  "case": {
+    "case_id": "CASO-015",
+    "age": 48,
+    "sex": "M",
+    "chief_complaint": "Infecciones urinarias y hongos que no se curan",
+    "symptoms": [
+      "disuria recurrente",
+      "candidiasis genital",
+      "cansancio"
+    ],
+    "medical_history": [
+      "sobrepeso",
+      "hígado graso"
+    ],
+    "allergies": [
+      "penicilina"
+    ],
+    "medications": [
+      {
+        "name": "fluconazol",
+        "dose": "150 mg semanal"
+      },
+      {
+        "name": "paracetamol",
+        "dose": "500 mg a demanda"
+      }
+    ],
+    "lab_results": {
+      "glucose_mg_dl": 318,
+      "hba1c_pct": 11.4,
+      "creatinine_mg_dl": 0.9,
+      "egfr_ml_min": 95
+    }
+  },
+  "expected": {
+    "type": "atypical",
+    "test_cases": [
+      "CP05"
+    ],
+    "primary_diagnosis": {
+      "icd10": "E11.9",
+      "name": "Diabetes mellitus tipo 2 diagnosticada por infecciones recurrentes"
+    },
+    "acceptable_diagnoses": [
+      "E11",
+      "E11.6",
+      "E11.9",
+      "E14.9"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_dm2"
+    ],
+    "key_points": [
+      "HbA1c muy elevada: considerar insulina inicial",
+      "Fluconazol no está en el catálogo: debe informarse como no reconocido",
+      "Alergia a penicilina registrada"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_dm2"
+  }
+}

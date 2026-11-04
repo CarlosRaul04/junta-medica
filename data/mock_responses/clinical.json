@@ -1,0 +1,13 @@
+{
+  "diagnoses": [
+    {"icd10": "I50.0", "name": "[SIMULADO] Insuficiencia cardiaca congestiva", "likelihood": "high",
+     "rationale": "[SIMULADO] Disnea, ortopnea y edema.", "citations": ["gpc_ic:p16"]},
+    {"icd10": "I10", "name": "[SIMULADO] Hipertensión esencial", "likelihood": "medium",
+     "rationale": "[SIMULADO] Antecedente de hipertensión.", "citations": []}
+  ],
+  "plan": [
+    {"text": "[SIMULADO] Revisar la medicación con riesgo según las alertas.", "citations": []}
+  ],
+  "missing_data": ["[SIMULADO] Péptido natriurético"],
+  "response_to_objections": []
+}

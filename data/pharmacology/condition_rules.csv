@@ -1,0 +1,41 @@
+rule_id,drug,criterion_type,parameter,operator,value,severity,effect,recommendation,source,page
+RC01,metformina,lab,egfr_ml_min,<,30,severe,Contraindicada con TFGe < 30 mL/min/1.73 m².,Suspender o no iniciar metformina.,gpc_dm2,31
+RC02,glibenclamida,lab,egfr_ml_min,<,30,severe,Sulfonilurea contraindicada con TFGe < 30 mL/min/1.73 m².,Suspender o no iniciar; considerar otra alternativa.,gpc_dm2,31
+RC03,gliclazida,lab,egfr_ml_min,<,30,severe,Sulfonilurea contraindicada con TFGe < 30 mL/min/1.73 m².,Suspender o no iniciar; considerar otra alternativa.,gpc_dm2,31
+RC04,glibenclamida,age,age,>,60,moderate,Mayor riesgo de hipoglucemia en mayores de 60 años; la guía la reserva para ≤ 60 años.,Preferir gliclazida.,gpc_dm2,15
+RC05,pioglitazona,history,insuficiencia cardiaca,contains,insuficiencia cardiaca|insuficiencia cardiaca cronica|falla cardiaca|icc,moderate,Riesgo de retención de líquidos e insuficiencia cardiaca.,Usar con precaución y monitorear el peso; valorar otra alternativa.,gpc_dm2,19
+RC06,empagliflozina,lab,egfr_ml_min,<,20,moderate,No cumple el criterio para iniciar iSGLT2 (TFGe ≥ 20 mL/min/1.73 m²).,"No iniciar. Si ya lo recibe, puede mantenerse según tolerancia y criterio clínico; suspender si inicia diálisis.",gpc_dm2,21
+RC07,dapagliflozina,lab,egfr_ml_min,<,20,moderate,No cumple el criterio para iniciar iSGLT2 (TFGe ≥ 20 mL/min/1.73 m²).,"No iniciar. Si ya lo recibe, puede mantenerse según tolerancia y criterio clínico; suspender si inicia diálisis.",gpc_dm2,21
+RC08,espironolactona,lab,egfr_ml_min,<,30,severe,Con TFG < 30 mL/min/1.73 m² la guía indica suspenderla.,Suspender espironolactona.,gpc_ic,23
+RC09,espironolactona,lab,potassium_meq_l,>,6,severe,Hiperpotasemia: potasio sérico > 6 mEq/L.,Suspender espironolactona.,gpc_ic,23
+RC10,espironolactona,lab,potassium_meq_l,>=,5,moderate,"Para iniciarla se requiere potasio sérico < 5,0 mEq/L.","No iniciar; si ya la recibe, monitorear potasio y función renal.",gpc_ic,23
+RC11,espironolactona,lab,creatinine_mg_dl,>=,2.5,moderate,"Para iniciarla se requiere creatinina < 2,5 mg/dL.","No iniciar; si ya la recibe, monitorear función renal.",gpc_ic,23
+RC12,eplerenona,lab,egfr_ml_min,<,30,severe,Antagonista de aldosterona: suspender con TFG < 30 mL/min/1.73 m².,Suspender eplerenona.,gpc_ic,133
+RC13,eplerenona,lab,potassium_meq_l,>,6,severe,Antagonista de aldosterona: suspender con potasio sérico > 6 mEq/L.,Suspender eplerenona.,gpc_ic,133
+RC14,finerenona,lab,potassium_meq_l,>,5.5,severe,"Hiperpotasemia: potasio sérico > 5,5 mmol/L.","Suspender temporalmente; reintroducir con potasio < 5,0 mmol/L a 10 mg/día.",gpc_erc,25
+RC15,finerenona,lab,egfr_ml_min,<,25,moderate,Fuera del rango de indicación de la guía (TFGe 25 a 60 mL/min/1.73 m²).,Revisar la indicación.,gpc_erc,24
+RC16,diltiazem,lab,lvef_pct,<,40,severe,Efecto inotrópico negativo: la guía lo restringe a pacientes con FEVI ≥ 40 %.,Evitar diltiazem; considerar otra estrategia de control de frecuencia.,gpc_fa,63
+RC17,alopurinol,lab,egfr_ml_min,<,60,moderate,En ERC la dosis debe ajustarse a la función renal.,"Dosis inicial < 100 mg/día y no mayor a 1,5 mg por mL/min de TFG.",gpc_erc,22
+RC18,dabigatrán,lab,egfr_ml_min,<,30,severe,Contraindicado con insuficiencia renal grave (ACr < 30 ml/min).,No usar dabigatrán; considerar otra estrategia de anticoagulación.,ft_dabigatran,84
+RC19,dabigatrán,lab,egfr_ml_min,<,50,moderate,Insuficiencia renal moderada (ACr 30–50 ml/min): mayor exposición y riesgo de sangrado.,Considerar 110 mg cada 12 h si el riesgo de sangrado es alto; vigilar la función renal.,ft_dabigatran,81
+RC20,dabigatrán,age,age,>=,80,moderate,En pacientes de 80 años o más se recomienda reducir la dosis.,Usar 110 mg cada 12 h.,ft_dabigatran,79
+RC21,finerenona,lab,potassium_meq_l,>,5.0,moderate,"Con potasio sérico > 5,0 mmol/L no se debe iniciar finerenona.","No iniciar; si ya la recibe, monitorear el potasio según la tabla de ajuste de la ficha.",ft_finerenona,7
+RC22,finerenona,lab,egfr_ml_min,<,15,severe,"Enfermedad renal terminal (TFGe < 15 ml/min/1,73 m²): se debe interrumpir.",Suspender finerenona.,ft_finerenona,6
+RC23,ivabradina,lab,heart_rate_bpm,<,70,moderate,Para iniciarla se requiere FC en reposo ≥ 70 lpm (contraindicada por debajo antes del tratamiento).,"No iniciar. Si ya la recibe, una FC de 50–60 lpm puede ser el objetivo del tratamiento.",ft_ivabradina,4
+RC24,ivabradina,lab,heart_rate_bpm,<,50,severe,Bradicardia: FC en reposo < 50 lpm.,Reducir la dosis; suspender si persiste por debajo de 50 lpm o hay síntomas.,ft_ivabradina,5
+RC25,ivabradina,lab,systolic_bp_mmhg,<=,90,severe,Contraindicada con hipotensión grave (≤ 90/50 mmHg).,No usar ivabradina.,ft_ivabradina,4
+RC26,ivabradina,history,fibrilación auricular,contains,fibrilacion auricular|fibrilación auricular|aleteo auricular,moderate,No se recomienda en fibrilación auricular: no es eficaz sin ritmo sinusal.,Reconsiderar el tratamiento con ivabradina.,ft_ivabradina,5
+RC27,digoxina,lab,potassium_meq_l,<,3.5,moderate,"La hipopotasemia (K < 3,5 mEq/L) sensibiliza el miocardio a la digoxina: riesgo de toxicidad.",Corregir el potasio y vigilar signos de toxicidad digitálica.,ft_digoxina,6
+RC28,digoxina,lab,egfr_ml_min,<,60,moderate,Se elimina por vía renal: con función renal reducida se acumula.,"Reducir la dosis inicial y de mantenimiento; controlar la digoxinemia (0,8–2,0 ng/ml).",ft_digoxina,6
+RC29,levofloxacino,lab,egfr_ml_min,<,50,moderate,Con aclaramiento de creatinina < 50 ml/min la dosis debe ajustarse.,Ej. ACr 20–50: 500 mg el primer día y luego 250 mg/24 h (ver tabla de la ficha).,ft_levofloxacino,2
+RC30,levofloxacino,history,epilepsia,contains,epilepsia|convulsiones|crisis epilepticas,severe,Contraindicado en pacientes con epilepsia.,No usar; elegir otro antibiótico.,ft_levofloxacino,3
+RC31,ibuprofeno,lab,egfr_ml_min,<,30,severe,Contraindicado con insuficiencia renal grave (filtración glomerular < 30 ml/min).,Suspender o no iniciar; preferir paracetamol para el dolor.,ft_ibuprofeno,2
+RC32,ibuprofeno,history,insuficiencia cardiaca,contains,insuficiencia cardiaca|insuficiencia cardiaca cronica|falla cardiaca|icc,moderate,Retención de líquidos y edema en insuficiencia cardiaca; contraindicado en clase IV de la NYHA.,"Evitar; si es imprescindible, la menor dosis el menor tiempo y vigilar peso y función renal.",ft_ibuprofeno,4
+RC33,naproxeno,lab,egfr_ml_min,<,30,severe,No debe administrarse con insuficiencia renal grave.,Suspender o no iniciar; preferir paracetamol para el dolor.,ft_naproxeno,2
+RC34,naproxeno,history,insuficiencia cardiaca,contains,insuficiencia cardiaca|insuficiencia cardiaca cronica|falla cardiaca|icc,moderate,"Contraindicado en insuficiencia cardiaca grave; en las demás, solo si el beneficio supera el riesgo.",Evitar; valorar otra analgesia.,ft_naproxeno,3
+RC35,diclofenaco,lab,egfr_ml_min,<,30,severe,Contraindicado con insuficiencia renal grave.,Suspender o no iniciar; preferir paracetamol para el dolor.,ft_diclofenaco,2
+RC36,diclofenaco,history,insuficiencia cardiaca,contains,insuficiencia cardiaca|insuficiencia cardiaca cronica|falla cardiaca|icc,severe,Contraindicado en insuficiencia cardiaca congestiva establecida (NYHA II–IV).,Suspender diclofenaco.,ft_diclofenaco,3
+RC37,diclofenaco,history,cardiopatía isquémica,contains,cardiopatia isquemica|enfermedad coronaria|infarto de miocardio|angina,severe,"Contraindicado en cardiopatía isquémica, enfermedad arterial periférica o cerebrovascular.",Suspender diclofenaco.,ft_diclofenaco,3
+RC38,amoxicilina,lab,egfr_ml_min,<,30,moderate,"Ajuste renal: con TFG 10–30 mL/min, máximo 500 mg cada 12 h.",Ajustar la dosis según la tabla 4 de la guía.,gpc_nac,22
+RC39,amoxicilina/ácido clavulánico,lab,egfr_ml_min,<,30,moderate,"Ajuste renal: con TFG 10–30 mL/min, máximo 500 mg + 125 mg cada 12 h.",Ajustar la dosis según la tabla 4 de la guía.,gpc_nac,22
+RC40,cefuroxima,lab,egfr_ml_min,<,30,moderate,"Ajuste renal: con TFG 10 a < 30 mL/min, dosis estándar cada 24 h.",Ajustar la dosis según la tabla 4 de la guía.,gpc_nac,23

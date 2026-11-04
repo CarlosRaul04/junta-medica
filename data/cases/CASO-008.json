@@ -1,0 +1,83 @@
+{
+  "case": {
+    "case_id": "CASO-008",
+    "age": 77,
+    "sex": "M",
+    "chief_complaint": "Debilidad marcada y palpitaciones",
+    "symptoms": [
+      "debilidad muscular",
+      "palpitaciones",
+      "disnea de esfuerzo"
+    ],
+    "medical_history": [
+      "insuficiencia cardiaca crónica",
+      "enfermedad renal crónica"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "enalapril",
+        "dose": "20 mg cada 12 h"
+      },
+      {
+        "name": "espironolactona",
+        "dose": "50 mg cada 24 h"
+      },
+      {
+        "name": "furosemida",
+        "dose": "40 mg cada 24 h"
+      },
+      {
+        "name": "carvedilol",
+        "dose": "12,5 mg cada 12 h"
+      }
+    ],
+    "lab_results": {
+      "potassium_meq_l": 6.3,
+      "creatinine_mg_dl": 2.1,
+      "egfr_ml_min": 31,
+      "lvef_pct": 30,
+      "heart_rate_bpm": 58,
+      "systolic_bp_mmhg": 104
+    }
+  },
+  "expected": {
+    "type": "polypharmacy",
+    "test_cases": [
+      "CP02",
+      "CP03"
+    ],
+    "primary_diagnosis": {
+      "icd10": "E87.5",
+      "name": "Hiperpotasemia (por espironolactona + IECA)"
+    },
+    "acceptable_diagnoses": [
+      "E87.5",
+      "I50",
+      "I50.0",
+      "N18"
+    ],
+    "interactions": [
+      {
+        "drugs": [
+          "enalapril",
+          "espironolactona"
+        ],
+        "severity": "severe"
+      }
+    ],
+    "condition_alerts": [
+      "RC09"
+    ],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_ic",
+      "gpc_erc"
+    ],
+    "key_points": [
+      "Potasio > 6: suspender espironolactona",
+      "Revisar dosis del IECA y repetir potasio"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_ic, gpc_erc"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "case": {
+    "case_id": "CASO-010",
+    "age": 74,
+    "sex": "M",
+    "chief_complaint": "Episodios de sudoración, temblor y confusión antes del almuerzo",
+    "symptoms": [
+      "sudoración",
+      "temblor",
+      "confusión transitoria",
+      "mareos"
+    ],
+    "medical_history": [
+      "diabetes mellitus tipo 2",
+      "enfermedad renal crónica",
+      "hipertensión arterial"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "metformina",
+        "dose": "850 mg cada 8 h"
+      },
+      {
+        "name": "glibenclamida",
+        "dose": "5 mg cada 12 h"
+      },
+      {
+        "name": "enalapril",
+        "dose": "10 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "glucose_mg_dl": 52,
+      "hba1c_pct": 6.4,
+      "creatinine_mg_dl": 2.4,
+      "egfr_ml_min": 26,
+      "potassium_meq_l": 5.0
+    }
+  },
+  "expected": {
+    "type": "polypharmacy",
+    "test_cases": [
+      "CP02",
+      "CP03"
+    ],
+    "primary_diagnosis": {
+      "icd10": "E11.6",
+      "name": "DM2 con hipoglucemia por sulfonilurea"
+    },
+    "acceptable_diagnoses": [
+      "E11",
+      "E11.6",
+      "E11.2",
+      "E16.0",
+      "E16.2",
+      "N18.4"
+    ],
+    "interactions": [
+      {
+        "drugs": [
+          "glibenclamida",
+          "metformina"
+        ],
+        "severity": "moderate"
+      }
+    ],
+    "condition_alerts": [
+      "RC01",
+      "RC02",
+      "RC04"
+    ],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_dm2",
+      "gpc_erc"
+    ],
+    "key_points": [
+      "TFGe < 30: suspender metformina y glibenclamida",
+      "Mayor de 60: evitar glibenclamida",
+      "Considerar insulina o alternativa segura"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_dm2, gpc_erc"
+  }
+}

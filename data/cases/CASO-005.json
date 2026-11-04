@@ -1,0 +1,70 @@
+{
+  "case": {
+    "case_id": "CASO-005",
+    "age": 64,
+    "sex": "M",
+    "chief_complaint": "Control: le dijeron que sus riñones no funcionan bien",
+    "symptoms": [
+      "asintomático",
+      "nicturia"
+    ],
+    "medical_history": [
+      "diabetes mellitus tipo 2 de 12 años",
+      "hipertensión arterial"
+    ],
+    "allergies": [],
+    "medications": [
+      {
+        "name": "metformina",
+        "dose": "850 mg cada 12 h"
+      },
+      {
+        "name": "enalapril",
+        "dose": "10 mg cada 12 h"
+      },
+      {
+        "name": "atorvastatina",
+        "dose": "20 mg cada 24 h"
+      }
+    ],
+    "lab_results": {
+      "creatinine_mg_dl": 1.7,
+      "egfr_ml_min": 42,
+      "potassium_meq_l": 4.8,
+      "hba1c_pct": 7.4,
+      "systolic_bp_mmhg": 142,
+      "diastolic_bp_mmhg": 86,
+      "hemoglobin_g_dl": 12.6
+    }
+  },
+  "expected": {
+    "type": "common",
+    "test_cases": [
+      "CP04"
+    ],
+    "primary_diagnosis": {
+      "icd10": "N18.3",
+      "name": "Enfermedad renal crónica, etapa 3"
+    },
+    "acceptable_diagnoses": [
+      "N18",
+      "N18.3",
+      "N18.9",
+      "E11.2",
+      "I12.9"
+    ],
+    "interactions": [],
+    "condition_alerts": [],
+    "should_abstain": false,
+    "relevant_guidelines": [
+      "gpc_erc",
+      "gpc_dm2"
+    ],
+    "key_points": [
+      "Agregar iSGLT2 (TFGe ≥ 20)",
+      "Monitorizar TFGe y potasio",
+      "Ajustar la dosis de metformina con TFGe 30–45"
+    ],
+    "case_source": "Caso simulado elaborado por el equipo a partir de gpc_erc, gpc_dm2"
+  }
+}

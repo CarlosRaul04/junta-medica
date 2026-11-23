@@ -43,7 +43,17 @@
   - [x] Verificación de citas inventadas y trazabilidad · resultado completo en JSON (`output/debates/`, RF14)
   - [ ] **Equipo:** probar con modelos reales gratuitos (`MOCK_MODE=0`) y ajustar los prompts
   - [ ] Validar el código CIE-10 que propone cada agente contra `icd10.csv` (lo hará la evaluación)
-- [ ] Fase 4 — Interfaz Streamlit + informe PDF + historial (SQLite) + usuarios/roles
+- [x] Fase 4 — Interfaz Streamlit + informe PDF + historial (SQLite) + usuarios/roles (2026-11-23)
+  - [x] Inicio de sesión y cuentas con contraseña bcrypt; roles médico tratante / administrador (RF15)
+  - [x] Nueva consulta en 4 pasos o caso de ejemplo; validación con mensajes en español (RF01, RF02)
+  - [x] Progreso en vivo de cada agente (`DebateObserver`)
+  - [x] Resultado: dictamen, alertas destacadas (RF12), recomendaciones con fuente legible, debate por ronda,
+        trazabilidad y detalle por agente (RF14), disclaimer (RF17)
+  - [x] Informe PDF (RF13) · historial con búsqueda, filtros y CSV (RF16)
+  - [x] Capa de datos detrás de interfaces (`UserStore`, `ConsultationStore`, `FileStorage`): hoy SQLite + disco
+- [ ] Fase 4b — Nube (AWS, cuenta con créditos gratuitos): PostgreSQL en **RDS** para usuarios e historial, **S3** para
+      resultados JSON e informes PDF, y la app en EC2 o Lightsail. Solo hay que agregar `PostgresUserStore`,
+      `PostgresConsultationStore` y `S3FileStorage` y elegirlos en `factories/storage_factory.py`
 - [ ] Fase 5 — Script de evaluación (métricas) + baseline + experimentos de configuración
 - [ ] Fase 6 — Actualizar el documento (secciones 4.3, 4.4.3, 4.4.4 con resultados)
 - [ ] Fase 7 (EVOLUCIÓN, después de tener todo funcionando) — Herramientas para agentes (*function calling*)
@@ -71,7 +81,9 @@ Ver **[ARQUITECTURA.md](ARQUITECTURA.md)** — **arquitectura en capas** (config
 
 ## Interfaz
 - **Streamlit** (lo dice el documento). Ya NO se hará frontend en React (decisión anterior descartada).
-- Pantallas: Login · Registro de caso (formulario o JSON) · Resultado (tarjeta por agente + dictamen + alertas destacadas + disclaimer) · Historial (filtros + CSV) · Descarga PDF.
+- Pantallas (hechas, 2026-11-23): Inicio de sesión · Inicio · Nueva consulta (4 pasos o caso de ejemplo) · Junta en curso
+  (progreso en vivo) · Resultado (dictamen, alertas, recomendaciones, debate, fuentes, datos del caso, PDF) ·
+  Historial (búsqueda, filtros, CSV) · Cómo funciona · Usuarios (solo administrador).
 
 ## Fuentes de conocimiento (ajustado al documento)
 - Núcleo: **RAG local** con 6 GPC del INS y EsSalud (ver [FUENTES.md](FUENTES.md)) + fichas farmacológicas, en español, en ChromaDB.

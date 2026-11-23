@@ -257,3 +257,31 @@ cubra la enfermedad del paciente.
 **Limitación conocida:** el verificador de citas comprueba que la cita exista entre las entregadas, no que respalde la
 afirmación (el Jefe citó una página real pero irrelevante). La baja trazabilidad (40 %) sí lo delató. Para la evaluación:
 revisión manual de una muestra de citas (ya previsto en PLAN, "Trazabilidad ≥ 90 %").
+
+## 2026-11-23 — Aplicación web (Fase 4)
+La interfaz de la versión del compañero funcionaba, pero no era clara al entrar ("no sé qué hacer"). Se rehízo sobre
+esta versión (que ya tiene el arreglo de la psoriasis), con estas decisiones:
+
+**Experiencia de uso**
+- **Inicio** explica el sistema en 3 pasos y lleva a "Nueva consulta"; muestra las últimas consultas del usuario.
+- **Nueva consulta en 4 pasos** (paciente → cuadro clínico → medicación y laboratorio → revisar). Síntomas, antecedentes
+  y alergias se eligen de una lista (sacada de los casos) o se escriben; los medicamentos se eligen del catálogo con su
+  marca ("dabigatrán (Pradaxa)") o se escriben libres; en laboratorio solo se piden los resultados que se tengan.
+  El código del caso se propone solo (siguiente libre después de CASO-018).
+- **Caso de ejemplo** con un clic, para probar sin escribir nada.
+- **Junta en curso**: pantalla propia que muestra en vivo qué agente trabaja y qué dijo al terminar.
+  Para esto el orquestador avisa cada paso a un `DebateObserver` (la terminal usa `SilentDebateObserver`).
+- **Resultado**: arriba el dictamen del Médico Jefe (o el aviso de evidencia insuficiente), 5 indicadores y pestañas:
+  alertas, recomendaciones, debate por ronda, fuentes y trazabilidad, datos del caso. Las citas técnicas
+  (`gpc_ic:p22-23`) se muestran legibles ("GPC Insuficiencia cardiaca crónica (EsSalud-IETSI 2024), pág. 22-23").
+- Colores y tipografía iguales a la presentación (azul noche, verde azulado, óxido).
+
+**Datos (preparado para AWS)**
+- Usuarios e historial se guardan detrás de interfaces (`UserStore`, `ConsultationStore`); los archivos (JSON del
+  resultado e informe PDF) detrás de `FileStorage`. Hoy: SQLite (`junta_medica.sqlite`) y la carpeta `output/`.
+  Para la nube solo se agregan las versiones PostgreSQL (RDS) y S3 y se cambian en `factories/storage_factory.py`.
+- Las fechas se guardan en UTC y se muestran en hora de Perú.
+- El JSON del resultado lo arma `DebateResultSerializer` (el mismo para la terminal y la web).
+
+**Pruebas**: 381 (cuentas y roles, historial y permisos, CSV, PDF, citas legibles, almacenamiento, avisos del
+orquestador y una prueba de humo de la interfaz con `streamlit.testing`).

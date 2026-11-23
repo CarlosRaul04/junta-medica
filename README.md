@@ -16,7 +16,7 @@ pip install -r requirements.txt      # tarda: instala PyTorch y el modelo de bú
 cp .env.ejemplo .env                 # luego completar el .env (ver abajo)
 python -m pytest                     # todo debe pasar
 python -m scripts.index_guidelines   # una vez: arma la base de búsqueda (descarga ~470 MB la primera vez)
-python -m scripts.run_case CASO-008  # corre la junta médica sobre un caso
+streamlit run app.py                 # abre la aplicación web en http://localhost:8501
 ```
 
 **El `.env` es personal y NUNCA se sube a Git** (está en `.gitignore`). Para probar sin IA real: `MOCK_MODE=1`.
@@ -30,6 +30,23 @@ AGENT_MODEL=nvidia/nemotron-3.5-super-vl:free
 CHIEF_MODEL=nvidia/nemotron-3.5-super-vl:free
 ```
 Cada resultado se guarda completo en `output/debates/` (no se sube a Git).
+
+## Aplicación web
+```bash
+streamlit run app.py
+```
+- **La primera cuenta que se crea es la de administrador.** Las siguientes son de médico tratante (el administrador
+  puede cambiar el rol o desactivar cuentas en *Usuarios*).
+- **Nueva consulta:** el caso se llena en 4 pasos (paciente → cuadro clínico → medicación y laboratorio → revisar).
+  Para probar rápido, abrir "¿Solo quieres probar?" y cargar un caso de ejemplo.
+- Mientras la junta trabaja se ve en vivo qué hace cada agente. Al terminar se abre el **resultado**: dictamen del
+  Médico Jefe, alertas de medicación, recomendaciones con su fuente, el debate ronda por ronda, trazabilidad e
+  **informe PDF**.
+- **Historial:** buscar, abrir y exportar a CSV. El médico ve solo sus consultas; el administrador, las de todos.
+- Usuarios e historial se guardan en `junta_medica.sqlite`; resultados JSON e informes PDF en `output/`
+  (ninguno se sube a Git). Más adelante se pasarán a AWS (RDS + S3) sin cambiar la interfaz.
+- Si el navegador no abre solo, entrar a http://localhost:8501. Para detener: `Ctrl+C` en la terminal.
+- Sin internet para el modelo de búsqueda (ya descargado): `export HF_HUB_OFFLINE=1` antes de `streamlit run`.
 
 ## Elegir el proveedor y los modelos de IA
 El sistema funciona con **cualquier proveedor compatible con la API de OpenAI**, incluidos los gratuitos
@@ -52,7 +69,8 @@ En `.env.ejemplo` están las URLs de cada proveedor. Consejos para modelos gratu
 
 ## Comandos útiles
 ```bash
-python -m scripts.run_case CASO-008                      # corre la junta médica completa sobre un caso
+streamlit run app.py                                     # aplicación web
+python -m scripts.run_case CASO-008                      # corre la junta médica por terminal (sin interfaz)
 python -m scripts.index_guidelines                       # construye la base vectorial (chroma_db/)
 python -m scripts.search_guidelines "consulta clínica"  # prueba el buscador
 python -m scripts.build_interaction_table         # regenera interactions.csv (DDInter + fichas técnicas)

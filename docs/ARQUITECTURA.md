@@ -15,7 +15,7 @@ Es la misma idea del proyecto C# de referencia (AbogatoIA):
 | `services/` | **La lógica**: validar, normalizar, detectar, hablar con la IA | `Services/Implementation/` | `InteractionChecker` |
 | `factories/` | **Arma y conecta** los objetos (lee config y entrega servicios listos) | `Program.cs` | `create_case_loader()` |
 | `exceptions.py` | Errores propios del sistema | — | `InvalidCaseError` |
-| `ui/` (Fase 4) | Pantallas de Streamlit | `Controllers/` | — |
+| `ui/` | Pantallas de Streamlit (solo muestran y recogen datos) | `Controllers/` + vistas | `pages/result.py` |
 
 ### Dirección de las dependencias (nunca al revés)
 ```
@@ -161,17 +161,19 @@ junta-medica-ia/
 │   │   ├── diagnosis_factory.py     # create_icd10_repository()
 │   │   └── llm_factory.py              # create_llm_client()
 │   │
-│   └── exceptions.py                  # InvalidCaseError, LLMConfigurationError, LLMProviderError, InvalidResponseError, OutdatedIndexError
+│   └── exceptions.py                  # InvalidCaseError, LLMConfigurationError, LLMProviderError, InvalidResponseError,
+│                                      # OutdatedIndexError, UserAccountError, AccessDeniedError
 │
 └── tests/                            # ESPEJO de junta_medica/ (misma ruta, prefijo test_)
     ├── conftest.py                     # datos compartidos (caso de ejemplo) y dobles de prueba
     │                                   # (FakeEmbeddingModel, InMemoryVectorStore: el RAG se prueba sin descargar modelos)
-    ├── repositories/{cases, knowledge, pharmacology, diagnoses}/
-    └── services/{casos, conocimiento, farmacologia, llm}/
+    ├── repositories/{cases, knowledge, pharmacology, diagnoses, storage}/
+    ├── services/{cases, knowledge, pharmacology, llm, agents, debate, users, history, reports}/
+    └── ui/test_app.py                  # prueba de humo de la interfaz (streamlit.testing)
 ```
 
 Próximas áreas (se agregan en cada capa, con la misma forma):
-- `reports/`, `evaluation/` → en `services/`; persistencia SQLite → en `repositories/`; pantallas → `ui/`.
+- `evaluation/` → en `services/`; versiones PostgreSQL (RDS) y S3 → en `repositories/`.
 
 ### Agentes y debate (Fase 3)
 ```
@@ -206,6 +208,55 @@ Flujo de `DebateOrchestrator.run(case)`:
 3. Rondas (máx. 3): Clínico propone → se buscan fragmentos para esa propuesta → Farmacológico y Protocolo revisan →
    `ConsensusCalculator`. Sin consenso, el Clínico recibe las objeciones y corrige.
 4. `AlertConsolidator` → `ChiefAgent` → `CitationVerifier`.
+
+### Usuarios, historial, informes e interfaz web (Fase 4)
+```
+app.py                                    # streamlit run app.py
+.streamlit/config.toml                    # colores del tema
+junta_medica/
+├── config/users.py · storage.py          # roles y reglas de cuentas · dónde se guardan base y archivos
+├── models/users/                         # Role, User
+├── models/history/                       # Consultation, NewConsultation, ConsultationFilter
+├── interfaces/
+│   ├── user_store.py                     # UserStore (cuentas)
+│   ├── consultation_store.py             # ConsultationStore (historial)
+│   ├── file_storage.py                   # FileStorage (JSON e informes PDF)
+│   └── debate_observer.py                # DebateObserver (avisos del orquestador para el progreso en vivo)
+├── repositories/
+│   ├── database/sqlite_database.py       # SQLiteDatabase (conexión + tablas users y consultations)
+│   ├── users/sqlite_user_store.py        # SQLiteUserStore
+│   ├── history/sqlite_consultation_store.py  # SQLiteConsultationStore
+│   ├── storage/local_file_storage.py     # LocalFileStorage (carpeta output/)
+│   └── debate/debate_result_serializer.py    # DebateResultSerializer (resultado -> dict/JSON)
+├── services/
+│   ├── users/                            # PasswordHasher (bcrypt), AuthService (cuentas, inicio de sesión, roles)
+│   ├── history/                          # ConsultationService, consultation_summary(), CaseIdGenerator, CsvExporter
+│   ├── reports/                          # ResultReader, CitationFormatter, DateFormatter, PdfReportBuilder
+│   └── debate/silent_debate_observer.py  # SilentDebateObserver (cuando nadie mira el progreso)
+├── factories/
+│   ├── storage_factory.py                # AQUÍ se elige SQLite/local hoy y RDS/S3 en la nube
+│   ├── user_factory.py · history_factory.py · report_factory.py
+└── ui/
+    ├── main.py                           # página, inicio de sesión, barra lateral y menú
+    ├── navigation.py                     # pantallas y cómo ir de una a otra
+    ├── dependencies.py                   # servicios creados una vez por servidor (st.cache_resource)
+    ├── session.py                        # lo que se recuerda mientras se navega
+    ├── theme.py · assets/                # estilos y logo
+    ├── components/                       # piezas visuales: encabezado, indicadores, dictamen, alertas, debate,
+    │                                     # fuentes, ficha del caso, progreso en vivo (ProgressTracker), pasos
+    ├── forms/                            # formulario del caso: borrador + un archivo por paso + sugerencias
+    └── pages/                            # login, home, new_consultation, board_session, result, history,
+                                          # how_it_works, users
+```
+Reglas de la interfaz:
+- `ui/` **no tiene lógica clínica**: solo llama a servicios ya armados (`dependencies.py`) y dibuja.
+- Todo texto que viene del usuario o de la IA se escapa antes de dibujarlo como HTML (`components/html.py`).
+- El resultado se muestra siempre desde el JSON guardado (`ResultReader`), así una consulta del historial se ve
+  igual que una recién hecha.
+
+**Para pasar a AWS** (Fase 4b): crear `PostgresUserStore`, `PostgresConsultationStore` (mismas tablas que
+`sqlite_database.py`) y `S3FileStorage`, y devolverlos en `factories/storage_factory.py` según el `.env`.
+Nada más cambia.
 
 ## 3. Reglas de código (obligatorias)
 

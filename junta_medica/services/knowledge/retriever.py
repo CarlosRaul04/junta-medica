@@ -31,3 +31,13 @@ class KnowledgeRetriever:
         chunks = sorted(best.values(), key=lambda r: -r.similarity)[: limit or self._top_k]
         sufficient = bool(chunks) and chunks[0].similarity >= self._threshold
         return SearchResult(" | ".join(queries), tuple(chunks), sufficient)
+
+    def complement(self, decisive: SearchResult, extra: SearchResult, limit: int | None = None) -> SearchResult:
+        """Agrega los fragmentos de `extra` a los de `decisive`, pero la evidencia la decide SOLO `decisive`."""
+        best: dict[str, RetrievedChunk] = {r.chunk.chunk_id: r for r in decisive.chunks}
+        for retrieved in extra.chunks:
+            current = best.get(retrieved.chunk.chunk_id)
+            if current is None or retrieved.similarity > current.similarity:
+                best[retrieved.chunk.chunk_id] = retrieved
+        chunks = sorted(best.values(), key=lambda r: -r.similarity)[: limit or self._top_k]
+        return SearchResult(f"{decisive.query} | {extra.query}", tuple(chunks), decisive.sufficient_evidence)

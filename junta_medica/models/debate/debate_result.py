@@ -27,6 +27,11 @@ class DebateResult:
         return turns + ([self.verdict] if self.verdict else [])
 
     @property
+    def insufficient_evidence(self) -> bool:
+        """RF11: el sistema se abstuvo antes de debatir, o el Médico Jefe declaró que no hay evidencia suficiente."""
+        return self.abstained or bool(self.verdict and self.verdict.output.insufficient_evidence)
+
+    @property
     def llm_calls(self) -> int:
         return sum(t.llm.attempts for t in self.turns)
 

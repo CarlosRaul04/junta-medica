@@ -237,3 +237,23 @@ Problemas vistos en el JSON (`output/debates/`) y arreglos:
   p23–24 de la guía de IC (espironolactona y potasio), trazabilidad 86 %. De las 2 afirmaciones sin cita: una es
   correcta (el ECG urgente no está en las guías y el agente no inventó cita); la otra tenía la cita escrita dentro del
   texto. Ahora una cita escrita así ("... [gpc_ic:p23-24]") se reconoce y se pasa a su campo.
+
+## 2026-11-06 — Error de abstención con CASO-017 (psoriasis) y arreglo
+**Qué pasó:** con IA real, el caso de psoriasis NO se abstuvo ("evidencia suficiente"), debatió y el Jefe citó páginas
+sin relación (ej. "suspender hidrocortisona" citando la guía de IC). Trazabilidad 40 %.
+
+**Causa** (introducida el 2026-11-04 al agregar la búsqueda por medicación): la consulta "tratamiento con hidrocortisona
+crema" encontró, con similitud 0,874, la sección de la guía de NAC que recomienda hidrocortisona en la neumonía severa,
+y esa coincidencia bastó para declarar "evidencia suficiente". Un fármaco presente en una guía no significa que la guía
+cubra la enfermedad del paciente.
+
+**Arreglo:**
+- La búsqueda se separa en dos: `for_presentation` (motivo + síntomas, motivo + antecedentes) **decide** si hay evidencia;
+  `for_treatment` (antecedentes + medicación) solo **agrega** fragmentos (`KnowledgeRetriever.complement`).
+- Si el Médico Jefe declara `insufficient_evidence`, el resultado lo refleja (`DebateResult.insufficient_evidence`) y
+  `run_case` lo muestra como advertencia destacada. Antes se ignoraba.
+- Prompt del Jefe: si declara evidencia insuficiente, no debe poner citas a fragmentos que no tratan el tema.
+
+**Limitación conocida:** el verificador de citas comprueba que la cita exista entre las entregadas, no que respalde la
+afirmación (el Jefe citó una página real pero irrelevante). La baja trazabilidad (40 %) sí lo delató. Para la evaluación:
+revisión manual de una muestra de citas (ya previsto en PLAN, "Trazabilidad ≥ 90 %").

@@ -67,8 +67,10 @@ def test_table_alerts_always_included_and_agent_alerts_need_valid_citation(valid
 
 def test_queries_from_case_and_proposal(valid_case):
     builder = QueryBuilder(60)
-    queries = builder.for_case(create_case_loader().from_dict(valid_case))
-    assert len(queries) == 3 and all(len(q) <= 60 for q in queries)
-    assert "enalapril" in QueryBuilder(400).for_case(create_case_loader().from_dict(valid_case))[-1]
+    case = create_case_loader().from_dict(valid_case)
+    queries = builder.for_presentation(case)
+    assert len(queries) == 2 and all(len(q) <= 60 for q in queries)
+    assert all("enalapril" not in q for q in QueryBuilder(400).for_presentation(case))
+    assert "enalapril" in QueryBuilder(400).for_treatment(case)[0]
     proposal = ClinicalProposal((ProposedDiagnosis("I10", "hipertensión", "high", ""),), (CitedItem("dieta"),))
     assert builder.for_proposal(proposal) == ["tratamiento de hipertensión", "dieta"]

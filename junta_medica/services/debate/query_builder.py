@@ -7,17 +7,24 @@ class QueryBuilder:
     def __init__(self, max_chars: int):
         self._max = max_chars
 
-    def for_case(self, case: ClinicalCase) -> list[str]:
+    def for_presentation(self, case: ClinicalCase) -> list[str]:
         """
-        Tres miradas del caso: lo que le pasa (motivo + síntomas), su contexto (motivo + antecedentes)
-        y su tratamiento actual (antecedentes + medicación: trae las recomendaciones de uso de esos fármacos,
-        ej. espironolactona y potasio en la guía de IC).
+        Lo que le pasa al paciente: motivo + síntomas, y motivo + antecedentes.
+        SOLO estas consultas deciden si las guías cubren el caso (abstención, RF11).
         """
         queries = [self._join([case.chief_complaint, *case.symptoms])]
         if case.medical_history:
             queries.append(self._join([case.chief_complaint, *case.medical_history]))
-        queries.append(self._join([*case.medical_history, "tratamiento con " + ", ".join(case.medication_names)]))
         return queries
+
+    def for_treatment(self, case: ClinicalCase) -> list[str]:
+        """
+        Su tratamiento actual (antecedentes + medicación): trae recomendaciones de uso de esos fármacos
+        (ej. espironolactona y potasio en la guía de IC). Solo AGREGA contexto, nunca decide la evidencia:
+        un medicamento que aparece en una guía no significa que la guía cubra la enfermedad del paciente
+        (ej. hidrocortisona en psoriasis encontraba la hidrocortisona de la neumonía severa).
+        """
+        return [self._join([*case.medical_history, "tratamiento con " + ", ".join(case.medication_names)])]
 
     def for_proposal(self, proposal: ClinicalProposal) -> list[str]:
         """Una consulta por diagnóstico (su manejo) y otra con el plan completo."""

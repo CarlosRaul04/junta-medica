@@ -43,6 +43,8 @@ def print_result(result) -> None:
             for d in r.proposal.output.diagnoses:
                 print(f"   {d.icd10} {d.name} ({d.likelihood})")
         verdict = result.verdict.output
+        if verdict.insufficient_evidence:
+            print(f"\n⚠ {texts.CHIEF_INSUFFICIENT_EVIDENCE}")
         print(f"\n{texts.ROLE_LABELS['chief']}: {verdict.summary}")
         if verdict.primary_diagnosis:
             print(f"Diagnóstico principal: {verdict.primary_diagnosis.icd10} {verdict.primary_diagnosis.name}")

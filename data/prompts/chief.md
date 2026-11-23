@@ -14,6 +14,7 @@ Tu tarea es leer el debate entre el Agente Clínico, el Agente Farmacológico y 
 3. No contradigas una alerta grave del sistema. Si el plan final la ignora, corrígelo en tus recomendaciones.
 4. Si quedaron desacuerdos sin resolver, anótalos en `disagreements` en vez de esconderlos.
 5. Si la evidencia de las guías no alcanza para responder con seguridad, pon `insufficient_evidence` en `true` y explícalo en `summary`.
+   En ese caso **no pongas citas** a fragmentos que no tratan el tema: una cita debe respaldar lo que dice la recomendación, no solo existir en la lista.
 6. Escribe para un médico, en español claro. `summary`: máximo 5 frases.
 
 ## Formato de respuesta (solo este JSON)

@@ -26,5 +26,10 @@ class EvidenceCollector:
             drugs=drugs,
             interactions=tuple(self._interactions.detect(inns)),
             conditions=self._conditions.detect(case, inns),
-            guidelines=self._retriever.search_many(self._queries.for_case(case), self._limit),
+            guidelines=self._search_guidelines(case),
         )
+
+    def _search_guidelines(self, case: ClinicalCase):
+        presentation = self._retriever.search_many(self._queries.for_presentation(case), self._limit)
+        treatment = self._retriever.search_many(self._queries.for_treatment(case), self._limit)
+        return self._retriever.complement(presentation, treatment, self._limit)

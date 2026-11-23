@@ -17,3 +17,7 @@ ABSTENTION_MESSAGE = (
     "El sistema no emite una segunda opinión diagnóstica ni terapéutica; se recomienda la evaluación por la "
     "especialidad correspondiente. Las alertas de seguridad de la medicación se informan igualmente."
 )
+CHIEF_INSUFFICIENT_EVIDENCE = (
+    "EVIDENCIA INSUFICIENTE: el Médico Jefe declaró que las guías de la base de conocimiento no respaldan "
+    "una recomendación para este caso. Lo que sigue no tiene sustento en las guías y debe tomarse con cautela."
+)

@@ -122,3 +122,10 @@ def test_protocol_receives_the_fragments_the_proposal_cites(retriever):
     proposal = {**PROPOSAL, "plan": [{"text": "Suspender espironolactona", "citations": [cited]}]}
     _, provider = run("CASO-008", retriever, {**script, "clinical": [proposal]})
     assert f"[{cited}]" in provider.messages["protocol"][0]
+
+
+def test_chief_declaring_insufficient_evidence_marks_the_result(retriever):
+    verdict = {**VERDICT, "insufficient_evidence": True}
+    script = {"clinical": [PROPOSAL], "pharmacological": [AGREE], "protocol": [AGREE], "chief": [verdict]}
+    result, _ = run("CASO-008", retriever, script)
+    assert not result.abstained and result.insufficient_evidence

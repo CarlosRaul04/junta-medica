@@ -30,6 +30,7 @@ class DebateResultRepository:
         data = dataclasses.asdict(result)
         data["summary"] = {
             "abstained": result.abstained,
+            "insufficient_evidence": result.insufficient_evidence,
             "rounds": len(result.rounds),
             "final_agreement": result.final_agreement,
             "llm_calls": result.llm_calls,

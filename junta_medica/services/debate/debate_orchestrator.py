@@ -10,6 +10,7 @@ DebateOrchestrator: dirige el proceso completo de un caso.
 """
 import time
 
+from junta_medica.interfaces.debate_observer import DebateObserver
 from junta_medica.models.cases.clinical_case import ClinicalCase
 from junta_medica.models.debate.case_evidence import CaseEvidence
 from junta_medica.models.debate.debate_result import DebateResult
@@ -25,6 +26,7 @@ from junta_medica.services.debate.citation_verifier import CitationVerifier
 from junta_medica.services.debate.consensus_calculator import ConsensusCalculator
 from junta_medica.services.debate.evidence_collector import EvidenceCollector
 from junta_medica.services.debate.query_builder import QueryBuilder
+from junta_medica.services.debate.silent_debate_observer import SilentDebateObserver
 from junta_medica.services.knowledge.retriever import KnowledgeRetriever
 
 
@@ -49,35 +51,47 @@ class DebateOrchestrator:
         self._protocol_fragments = protocol_fragments
         self._abstention_message = abstention_message
 
-    def run(self, case: ClinicalCase) -> DebateResult:
+    def run(self, case: ClinicalCase, observer: DebateObserver | None = None) -> DebateResult:
+        observer = observer or SilentDebateObserver()
         start = time.perf_counter()
         evidence = self._collector.collect(case)
+        observer.evidence_collected(evidence)
         if self._abstention.should_abstain(evidence):
-            return self._abstain(evidence, start)
+            result = self._abstain(evidence, start)
+            observer.abstained(result.abstention_reason)
+            return result
 
-        rounds = self._debate(evidence)
+        rounds = self._debate(evidence, observer)
         last = rounds[-1]
         allowed = self._allowed_citations(evidence, rounds)
         pharmacological_reviews = [t.output for t in last.reviews if t.role == self._pharmacological.role]
         alerts = self._alerts.consolidate(evidence, pharmacological_reviews, allowed)
         unresolved = self._unresolved_severe_objections(last)
+        observer.agent_started(self._chief.role, 0)
         verdict = self._chief.decide(evidence, rounds, alerts, unresolved, sorted(allowed))
+        observer.agent_finished(verdict)
         check = self._citations.check([last.proposal, *last.reviews, verdict], allowed)
         return DebateResult(case.case_id, evidence, tuple(rounds), verdict, False, "", tuple(alerts),
                             tuple(unresolved), check, time.perf_counter() - start)
 
-    def _debate(self, evidence: CaseEvidence) -> list[DebateRound]:
+    def _debate(self, evidence: CaseEvidence, observer: DebateObserver) -> list[DebateRound]:
         rounds: list[DebateRound] = []
         previous, feedback = None, None
         for number in range(1, self._max_rounds + 1):
+            observer.agent_started(self._clinical.role, number)
             proposal = self._clinical.propose(evidence.case, evidence.guidelines.chunks, number, previous, feedback)
+            observer.agent_finished(proposal)
             protocol_fragments = self._protocol_context(evidence, proposal.output)
-            reviews = (
-                self._pharmacological.review(evidence, proposal.output, number),
-                self._protocol.review(evidence.case, proposal.output, protocol_fragments, number),
-            )
+            observer.agent_started(self._pharmacological.role, number)
+            pharmacological = self._pharmacological.review(evidence, proposal.output, number)
+            observer.agent_finished(pharmacological)
+            observer.agent_started(self._protocol.role, number)
+            protocol = self._protocol.review(evidence.case, proposal.output, protocol_fragments, number)
+            observer.agent_finished(protocol)
+            reviews = (pharmacological, protocol)
             level, consensus = self._consensus.evaluate([t.output for t in reviews])
             rounds.append(DebateRound(number, proposal, reviews, level, consensus))
+            observer.round_finished(rounds[-1])
             if consensus:
                 break
             previous = proposal.output

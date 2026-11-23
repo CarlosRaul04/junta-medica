@@ -37,6 +37,8 @@ MAX_AGE = 120
 # Código del caso: identifica al caso sin datos personales (RF03)
 CASE_ID_PATTERN = r"CASO-\d{3}"
 CASE_ID_EXAMPLE = "CASO-001"
+CASE_ID_PREFIX = "CASO-"   # para proponer el siguiente código libre
+CASE_ID_DIGITS = 3
 
 # Patrones de datos personales que NO pueden aparecer en el caso (RF03, RNF05, Ley 29733)
 PERSONAL_DATA_PATTERNS = {

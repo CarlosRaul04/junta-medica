@@ -14,6 +14,7 @@ from junta_medica.factories.pharmacology_factory import (
     create_condition_checker, create_drug_normalizer, create_interaction_checker,
 )
 from junta_medica.repositories.debate.debate_result_repository import DebateResultRepository
+from junta_medica.repositories.debate.debate_result_serializer import DebateResultSerializer
 from junta_medica.repositories.prompts.prompt_repository import PromptRepository
 from junta_medica.services.agents.chief_agent import ChiefAgent
 from junta_medica.services.agents.clinical_agent import ClinicalAgent
@@ -71,5 +72,9 @@ def create_debate_orchestrator(retriever: KnowledgeRetriever | None = None,
     )
 
 
+def create_debate_result_serializer() -> DebateResultSerializer:
+    return DebateResultSerializer(knowledge_config.EMBEDDING_MODEL)
+
+
 def create_debate_result_repository() -> DebateResultRepository:
-    return DebateResultRepository(paths.DEBATES_DIR, knowledge_config.EMBEDDING_MODEL)
+    return DebateResultRepository(paths.DEBATES_DIR, create_debate_result_serializer())

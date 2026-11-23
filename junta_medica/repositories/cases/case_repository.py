@@ -16,6 +16,10 @@ class CaseRepository:
     def list_files(self) -> list[Path]:
         return sorted(self._folder.glob("CASO-*.json"))
 
+    def list_ids(self) -> list[str]:
+        """Códigos de los casos simulados (CASO-001...), sacados del nombre del archivo."""
+        return [path.stem for path in self.list_files()]
+
     def read_clinical_data(self, path: Path) -> dict:
         """Devuelve solo la sección 'caso' (sin validar todavía)."""
         content = self._read_json(path)

@@ -27,3 +27,11 @@ class OutdatedIndexError(Exception):
 
 class LLMProviderError(Exception):
     """El proveedor de IA respondió con un error (clave inválida, modelo inexistente, sin saldo, límite de uso)."""
+
+
+class UserAccountError(Exception):
+    """No se pudo crear la cuenta o iniciar sesión (el mensaje se muestra tal cual al usuario)."""
+
+
+class AccessDeniedError(Exception):
+    """El usuario no tiene permiso para ver o hacer eso (RF15)."""

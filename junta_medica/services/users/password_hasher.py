@@ -1,0 +1,10 @@
+"""PasswordHasher: guarda las contraseñas como hash bcrypt (nunca en texto plano, RNF04)."""
+import bcrypt
+
+
+class PasswordHasher:
+    def hash(self, password: str) -> str:
+        return bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
+
+    def verify(self, password: str, password_hash: str) -> bool:
+        return bcrypt.checkpw(password.encode("utf-8"), password_hash.encode("utf-8"))

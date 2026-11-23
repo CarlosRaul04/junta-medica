@@ -21,3 +21,11 @@ CHIEF_INSUFFICIENT_EVIDENCE = (
     "EVIDENCIA INSUFICIENTE: el Médico Jefe declaró que las guías de la base de conocimiento no respaldan "
     "una recomendación para este caso. Lo que sigue no tiene sustento en las guías y debe tomarse con cautela."
 )
+
+SEX_LABELS = {"M": "masculino", "F": "femenino"}
+LIKELIHOOD_LABELS = {"high": "alta", "medium": "media", "low": "baja"}
+REPORT_TITLE = "Junta Médica IA · Informe de segunda opinión"
+INSUFFICIENT_EVIDENCE_LABEL = "Evidencia insuficiente"
+# Fuentes de citas que no están en el catálogo de documentos
+EXTERNAL_SOURCES = {"ddinter": "DDInter (base de interacciones farmacológicas)"}
+DISPLAY_TIMEZONE = "America/Lima"     # las fechas se guardan en UTC y se muestran en hora de Perú

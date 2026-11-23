@@ -83,3 +83,52 @@ def fake_embeddings():
 @pytest.fixture
 def in_memory_store():
     return InMemoryVectorStore()
+
+
+# ---------------------------------------------------------------------------
+# Usuarios, historial y archivos: base SQLite temporal y un resultado de junta real (IA simulada).
+# ---------------------------------------------------------------------------
+from junta_medica.config import paths
+from junta_medica.factories.case_factory import create_case_loader
+from junta_medica.factories.debate_factory import create_debate_orchestrator
+from junta_medica.factories.knowledge_factory import create_indexer
+from junta_medica.factories.user_factory import create_auth_service
+from junta_medica.repositories.database.sqlite_database import SQLiteDatabase
+from junta_medica.repositories.history.sqlite_consultation_store import SQLiteConsultationStore
+from junta_medica.repositories.storage.local_file_storage import LocalFileStorage
+from junta_medica.repositories.users.sqlite_user_store import SQLiteUserStore
+from junta_medica.services.knowledge.retriever import KnowledgeRetriever
+from junta_medica.services.llm.cost_calculator import CostCalculator
+from junta_medica.services.llm.llm_client import LLMClient
+from junta_medica.services.llm.providers.mock_provider import MockLLMProvider
+
+
+@pytest.fixture(scope="session")
+def debate_result():
+    embeddings, store = FakeEmbeddingModel(), InMemoryVectorStore()
+    create_indexer(embeddings, store).index()
+    retriever = KnowledgeRetriever(embeddings, store, 5, 0.05)
+    roles = ["clinical", "pharmacological", "protocol", "chief"]
+    client = LLMClient(MockLLMProvider(paths.MOCK_RESPONSES_DIR), CostCalculator({}), 0, {r: "mock" for r in roles})
+    case = create_case_loader().from_file(paths.CASES_DIR / "CASO-008.json")
+    return create_debate_orchestrator(retriever=retriever, llm_client=client).run(case)
+
+
+@pytest.fixture
+def database(tmp_path):
+    return SQLiteDatabase(tmp_path / "test.sqlite")
+
+
+@pytest.fixture
+def consultation_store(database):
+    return SQLiteConsultationStore(database)
+
+
+@pytest.fixture
+def file_storage(tmp_path):
+    return LocalFileStorage(tmp_path / "files")
+
+
+@pytest.fixture
+def auth(database):
+    return create_auth_service(SQLiteUserStore(database))

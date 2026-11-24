@@ -17,6 +17,10 @@ def recommendation_list(result: ResultReader, citations: CitationFormatter) -> N
         st.markdown("**Discrepancias que la junta no resolvió**")
         for item in result.disagreements:
             st.warning(item, icon="⚠️")
+    if result.limitations:
+        st.markdown("**Lo que las guías no cubren** (decidir con criterio clínico)")
+        for item in result.limitations:
+            st.info(item, icon="📘")
     missing = (result.last_proposal or {}).get("missing_data") or []
     if missing:
         st.markdown("**Datos que ayudarían a decidir mejor**")

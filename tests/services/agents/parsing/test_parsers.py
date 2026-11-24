@@ -77,3 +77,23 @@ def test_citation_written_inside_the_text_is_moved_to_citations():
     assert alert.text == "Enalapril puede mantener elevada la potasemia."
     assert alert.citations == ("gpc_ic:p23-24",)
     assert review.objections[0].citations == ("ddinter:DDInter1-DDInter2",)
+
+
+def test_chief_limitations_are_separate_from_insufficient_evidence():
+    """Un punto concreto sin guía va en limitations y NO convierte el caso en 'evidencia insuficiente'."""
+    from junta_medica.services.agents.parsing.chief_verdict_parser import ChiefVerdictParser
+    verdict = ChiefVerdictParser(max_differentials=2).parse({
+        "summary": "Hiperpotasemia por espironolactona e IECA.",
+        "primary_diagnosis": {"icd10": "E87.5", "name": "Hiperpotasemia"},
+        "recommendations": [{"text": "Suspender espironolactona.", "citations": ["gpc_ic:p23"]}],
+        "limitations": ["Las guías no detallan el manejo de urgencia.", ""],
+        "insufficient_evidence": False,
+    })
+    assert verdict.limitations == ("Las guías no detallan el manejo de urgencia.",)
+    assert verdict.insufficient_evidence is False
+
+
+def test_chief_without_limitations_field_still_parses():
+    from junta_medica.services.agents.parsing.chief_verdict_parser import ChiefVerdictParser
+    verdict = ChiefVerdictParser(max_differentials=2).parse({"summary": "x", "insufficient_evidence": True})
+    assert verdict.limitations == () and verdict.insufficient_evidence is True

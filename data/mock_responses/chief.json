@@ -6,5 +6,6 @@
     {"text": "[SIMULADO] Seguir las alertas de seguridad del informe.", "citations": []}
   ],
   "disagreements": [],
+  "limitations": ["[SIMULADO] Ejemplo de un punto que las guías no cubren."],
   "insufficient_evidence": false
 }

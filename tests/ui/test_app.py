@@ -9,6 +9,7 @@ from junta_medica.factories import storage_factory
 
 @pytest.fixture
 def app(tmp_path, monkeypatch):
+    monkeypatch.setattr(storage, "BACKEND", storage.LOCAL_BACKEND)   # nunca escribir en el MongoDB del servidor
     monkeypatch.setattr(storage, "SQLITE_PATH", tmp_path / "app.sqlite")
     monkeypatch.setattr(storage, "FILES_ROOT", tmp_path / "files")
     storage_factory.create_database.cache_clear()

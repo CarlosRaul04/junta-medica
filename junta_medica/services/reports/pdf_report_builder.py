@@ -112,6 +112,8 @@ class PdfReportBuilder:
             story.append(self._p(f"<b>Diagnósticos diferenciales:</b> {_text(items)}", raw=True))
         story.append(Spacer(1, 2 * mm))
         story.append(self._p(f"<b>Resumen del Médico Jefe:</b> {_text(verdict.get('summary', ''))}", raw=True))
+        for item in result.limitations:
+            story.append(self._p(f"<b>No cubierto por las guías:</b> {_text(item)}", raw=True))
         for item in result.disagreements:
             story.append(self._p(f"<font color='#B54708'><b>Discrepancia sin resolver:</b></font> {_text(item)}",
                                  raw=True))

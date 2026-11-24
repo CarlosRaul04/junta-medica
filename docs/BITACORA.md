@@ -299,3 +299,16 @@ orquestador y una prueba de humo de la interfaz con `streamlit.testing`).
 - El servidor accede a S3 con un **rol IAM** (sin claves en el código ni en el `.env`).
 - Pruebas: las mismas pruebas de usuarios e historial corren contra SQLite, contra MongoDB simulado (`mongomock`) y,
   con `TEST_MONGODB_URI`, contra un MongoDB real; S3 se prueba con un S3 simulado (`moto`).
+
+## 2026-11-24 — Primera prueba en AWS y ajuste del Médico Jefe
+- **Despliegue probado** en la cuenta del equipo (EC2 t3.medium + MongoDB 8.0 en el mismo servidor + bucket S3 con
+  rol IAM): 396 pruebas pasan en el servidor (incluidas las de MongoDB real), y el CASO-008 corrió completo desde el
+  navegador con IA real. Luego la instancia se detuvo hasta la presentación.
+- Arreglo: `python-dateutil==4.0.0` chocaba con `botocore` (pide < 3); se fijó la 2.9.0.post0.
+- **Ajuste del Médico Jefe:** en el CASO-008 marcó `insufficient_evidence` porque las guías no cubrían dos puntos
+  menores (manejo de urgencia, ajuste del IECA), y el informe salía como "evidencia insuficiente" aunque el dictamen
+  era correcto. Eso además contaría como abstención equivocada en la evaluación. Ahora:
+  - `insufficient_evidence` = las guías no tratan el problema principal (no hay segunda opinión).
+  - `limitations` (campo nuevo) = puntos concretos que las guías no cubren; se muestran en "Recomendaciones" y en el
+    PDF como "No cubierto por las guías", sin invalidar el dictamen.
+- La prueba de la interfaz fuerza SQLite para no escribir nunca en el MongoDB del servidor.

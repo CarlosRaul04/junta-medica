@@ -103,7 +103,7 @@ AWS_REGION=us-east-1
 ```
 Probar y arrancar:
 ```bash
-TEST_MONGODB_URI="mongodb://junta_app:CLAVE_MONGO@localhost:27017/junta_medica_test?authSource=junta_medica" python -m pytest -q
+STORAGE_BACKEND=local TEST_MONGODB_URI="mongodb://junta_app:CLAVE_MONGO@localhost:27017/junta_medica_test?authSource=junta_medica" python -m pytest -q
 python -m scripts.index_guidelines     # base de búsqueda (descarga el modelo e5, ~5 min)
 nohup streamlit run app.py --server.address 0.0.0.0 --server.port 8501 --server.headless true > app.log 2>&1 &
 ```
@@ -124,6 +124,12 @@ db.consultations.countDocuments({severe_alerts: {$gt: 0}})     // consultas con 
 Los PDF: S3 → bucket → carpeta `reports/`.
 
 ## 7. Entre la prueba y la presentación
+Probado el 2026-11-24: 396 pruebas (incluido MongoDB real), S3 con el rol IAM, búsqueda con 139 fragmentos y el
+CASO-008 completo desde el navegador (usuario y consulta en MongoDB, PDF y JSON en S3).
+
+Para actualizar el código en el servidor: `cd junta-medica-ia && git pull` (pide usuario y token) y volver a arrancar
+la app (`pkill -f streamlit` y el comando `nohup streamlit ...`).
+
 - **Apagar:** EC2 → Instance state → **Stop**. Apagado solo cobra el disco (~0,08 USD/día); MongoDB y los datos
   se conservan. Al prenderlo (**Start**) **cambia la IP pública**: entrar por Instance Connect y arrancar la app:
   ```bash

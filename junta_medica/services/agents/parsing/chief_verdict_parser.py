@@ -17,6 +17,7 @@ class ChiefVerdictParser:
             differential_diagnoses=tuple(d for d in differentials if d)[: self._max_differentials],
             recommendations=read_cited_items(data.get("recommendations")),
             disagreements=read_text_list(data.get("disagreements")),
+            limitations=read_text_list(data.get("limitations")),
             insufficient_evidence=read_bool(data.get("insufficient_evidence")),
         )
 

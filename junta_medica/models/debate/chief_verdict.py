@@ -17,4 +17,5 @@ class ChiefVerdict:
     differential_diagnoses: tuple[DiagnosisSummary, ...] = ()
     recommendations: tuple[CitedItem, ...] = ()
     disagreements: tuple[str, ...] = ()            # discrepancias que quedaron sin resolver
-    insufficient_evidence: bool = False            # RF11: el jefe declara que no hay evidencia suficiente
+    limitations: tuple[str, ...] = ()              # puntos concretos que las guías no cubren (no invalidan el dictamen)
+    insufficient_evidence: bool = False            # RF11: las guías no cubren el caso en general (no hay segunda opinión)

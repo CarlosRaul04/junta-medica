@@ -67,6 +67,11 @@ class ResultReader:
         return list(self.data.get("unresolved_objections") or []) + list((self.verdict or {}).get("disagreements") or [])
 
     @property
+    def limitations(self) -> list[str]:
+        """Puntos concretos que las guías no cubren (el dictamen sigue siendo válido)."""
+        return list((self.verdict or {}).get("limitations") or [])
+
+    @property
     def alerts(self) -> list[dict]:
         return self.data.get("alerts") or []
 

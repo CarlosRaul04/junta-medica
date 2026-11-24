@@ -1,7 +1,7 @@
 """
 SQLiteDatabase: abre conexiones al archivo SQLite y crea las tablas la primera vez.
 
-El SQL es estándar para que pasar a PostgreSQL (AWS RDS) sea solo cambiar esta clase y los stores.
+En AWS se usa MongoDB en su lugar (mongo_database.py), con los mismos datos.
 """
 import sqlite3
 from contextlib import contextmanager

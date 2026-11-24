@@ -1,1 +1,1 @@
-"""Conexión a la base de datos relacional: sqlite_database.py (luego PostgreSQL en AWS RDS)."""
+"""Bases de datos: sqlite_database.py (local) y mongo_database.py (MongoDB en AWS)."""

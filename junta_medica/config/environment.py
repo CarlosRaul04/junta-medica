@@ -36,3 +36,11 @@ ROLE_MODEL_OVERRIDES = {
 # --- Compatibilidad (algunos modelos gratuitos no soportan todo) ---
 LLM_JSON_MODE = _flag("LLM_JSON_MODE", "1")                    # 0 si el proveedor rechaza response_format
 LLM_MERGE_SYSTEM_PROMPT = _flag("LLM_MERGE_SYSTEM_PROMPT", "0")  # 1 si el modelo no acepta mensaje "system"
+
+# --- Almacenamiento (ver config/storage.py) ---
+# local = SQLite + carpeta output/ (por defecto) · aws = MongoDB + bucket S3
+STORAGE_BACKEND = os.getenv("STORAGE_BACKEND", "local").strip().lower()
+MONGODB_URI = os.getenv("MONGODB_URI", "").strip()             # mongodb://usuario:clave@host:27017/...
+MONGODB_DATABASE = os.getenv("MONGODB_DATABASE", "junta_medica").strip()
+S3_BUCKET = os.getenv("S3_BUCKET", "").strip()
+AWS_REGION = os.getenv("AWS_REGION", "us-east-1").strip()

@@ -279,9 +279,23 @@ esta versión (que ya tiene el arreglo de la psoriasis), con estas decisiones:
 **Datos (preparado para AWS)**
 - Usuarios e historial se guardan detrás de interfaces (`UserStore`, `ConsultationStore`); los archivos (JSON del
   resultado e informe PDF) detrás de `FileStorage`. Hoy: SQLite (`junta_medica.sqlite`) y la carpeta `output/`.
-  Para la nube solo se agregan las versiones PostgreSQL (RDS) y S3 y se cambian en `factories/storage_factory.py`.
+  Para la nube solo se agregan otras versiones (al final: MongoDB y S3) y se eligen en `factories/storage_factory.py`.
 - Las fechas se guardan en UTC y se muestran en hora de Perú.
 - El JSON del resultado lo arma `DebateResultSerializer` (el mismo para la terminal y la web).
 
 **Pruebas**: 381 (cuentas y roles, historial y permisos, CSV, PDF, citas legibles, almacenamiento, avisos del
 orquestador y una prueba de humo de la interfaz con `streamlit.testing`).
+
+## 2026-11-23 — Preparado para AWS (MongoDB + S3)
+- **Base de datos en la nube: MongoDB**, por recomendación del profesor. Se probó primero PostgreSQL (RDS) y se
+  reemplazó el mismo día. MongoDB corre en el mismo servidor EC2 (no se paga aparte y no es accesible desde
+  internet); alternativa administrada: Amazon DocumentDB (compatible con MongoDB, más cara). Ver [AWS.md](AWS.md).
+- La cuenta de AWS del equipo no tiene créditos (es antigua y la nueva fue detectada como el mismo cliente), así que
+  se usará **solo para probar y presentar** y se borrará todo después (~1 USD por día de uso).
+- `STORAGE_BACKEND` en el `.env`: `local` (SQLite + `output/`, por defecto) o `aws` (MongoDB + bucket S3).
+  Nuevas clases: `MongoDatabase` (colecciones `users`, `consultations` y `counters` para que los ids sigan siendo
+  1, 2, 3…), `MongoUserStore`, `MongoConsultationStore`, `S3FileStorage`. `factories/storage_factory.py` elige según
+  el `.env` y avisa si falta `MONGODB_URI` o `S3_BUCKET`.
+- El servidor accede a S3 con un **rol IAM** (sin claves en el código ni en el `.env`).
+- Pruebas: las mismas pruebas de usuarios e historial corren contra SQLite, contra MongoDB simulado (`mongomock`) y,
+  con `TEST_MONGODB_URI`, contra un MongoDB real; S3 se prueba con un S3 simulado (`moto`).

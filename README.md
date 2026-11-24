@@ -44,7 +44,8 @@ streamlit run app.py
   **informe PDF**.
 - **Historial:** buscar, abrir y exportar a CSV. El médico ve solo sus consultas; el administrador, las de todos.
 - Usuarios e historial se guardan en `junta_medica.sqlite`; resultados JSON e informes PDF en `output/`
-  (ninguno se sube a Git). Más adelante se pasarán a AWS (RDS + S3) sin cambiar la interfaz.
+  (ninguno se sube a Git). Con `STORAGE_BACKEND=aws` en el `.env` se guardan en AWS (MongoDB + S3): ver
+  [docs/AWS.md](docs/AWS.md).
 - Si el navegador no abre solo, entrar a http://localhost:8501. Para detener: `Ctrl+C` en la terminal.
 - Sin internet para el modelo de búsqueda (ya descargado): `export HF_HUB_OFFLINE=1` antes de `streamlit run`.
 
@@ -91,4 +92,5 @@ clínica del INS y EsSalud (IETSI).
 1. [Bitácora](docs/BITACORA.md) — qué se hizo y por qué
 2. [Plan del proyecto](docs/PLAN.md) — estado por fases, decisiones y pendientes
 3. [Fuentes](docs/FUENTES.md) — enfermedades, guías descargadas, medicamentos, interacciones y casos
+4. [AWS](docs/AWS.md) — despliegue en la nube para la presentación (crear, apagar y borrar)
 4. [Arquitectura y reglas de código (SOLID)](docs/ARQUITECTURA.md)

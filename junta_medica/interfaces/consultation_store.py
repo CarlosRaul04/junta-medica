@@ -1,4 +1,4 @@
-"""ConsultationStore: el historial de consultas (implementaciones: SQLite local; luego PostgreSQL en AWS RDS)."""
+"""ConsultationStore: el historial de consultas (implementaciones: SQLite local, MongoDB en AWS)."""
 from abc import ABC, abstractmethod
 
 from junta_medica.models.history.consultation import Consultation

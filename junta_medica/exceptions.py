@@ -35,3 +35,7 @@ class UserAccountError(Exception):
 
 class AccessDeniedError(Exception):
     """El usuario no tiene permiso para ver o hacer eso (RF15)."""
+
+
+class StorageConfigurationError(Exception):
+    """Falta configuración para guardar en la nube (MONGODB_URI, S3_BUCKET) o el valor de STORAGE_BACKEND no existe."""

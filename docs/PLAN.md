@@ -6,7 +6,7 @@
 ## Estado actual
 - [x] Revisión completa del código C# original
 - [x] Análisis crítico del documento del curso
-- [x] Decisión de stack: **Python + Streamlit + ChromaDB + SQLite + ReportLab**
+- [x] Decisión de stack: **Python + Streamlit + ChromaDB + ReportLab**; base de datos **SQLite** en local y **MongoDB** en AWS (recomendación del profesor, 2026-11-23) + **S3** para los informes
 - [x] ~~Decisión de modelos: OpenAI de pago~~ → **cambio (2026-11-04): presupuesto cero.** El sistema acepta cualquier proveedor compatible con OpenAI (OpenRouter `:free`, Groq, Gemini, Ollama). **La elección de los modelos gratuitos queda a cargo del equipo** (ver README → "Elegir el proveedor y los modelos de IA")
 - [x] Editor: **VS Code**
 - [x] Fase 0 — Entorno (Python 3.12 + .venv) y estructura base SOLID: paquete `junta_medica/` (ver ARQUITECTURA.md), cliente de IA con proveedor genérico compatible con OpenAI + simulado, pruebas
@@ -51,9 +51,10 @@
         trazabilidad y detalle por agente (RF14), disclaimer (RF17)
   - [x] Informe PDF (RF13) · historial con búsqueda, filtros y CSV (RF16)
   - [x] Capa de datos detrás de interfaces (`UserStore`, `ConsultationStore`, `FileStorage`): hoy SQLite + disco
-- [ ] Fase 4b — Nube (AWS, cuenta con créditos gratuitos): PostgreSQL en **RDS** para usuarios e historial, **S3** para
-      resultados JSON e informes PDF, y la app en EC2 o Lightsail. Solo hay que agregar `PostgresUserStore`,
-      `PostgresConsultationStore` y `S3FileStorage` y elegirlos en `factories/storage_factory.py`
+- [ ] Fase 4b — Nube (AWS): **MongoDB** (en el EC2) para usuarios e historial, **S3** para resultados JSON e informes
+      PDF, y la app en **EC2**. Guía: [AWS.md](AWS.md)
+  - [x] Código listo: `STORAGE_BACKEND=aws` usa `MongoUserStore`, `MongoConsultationStore` y `S3FileStorage`
+  - [ ] Crear los recursos, probar, presentar y **borrar todo** (la cuenta no tiene créditos: pago por horas)
 - [ ] Fase 5 — Script de evaluación (métricas) + baseline + experimentos de configuración
 - [ ] Fase 6 — Actualizar el documento (secciones 4.3, 4.4.3, 4.4.4 con resultados)
 - [ ] Fase 7 (EVOLUCIÓN, después de tener todo funcionando) — Herramientas para agentes (*function calling*)
@@ -75,6 +76,7 @@ Para que la evolución sea fácil: los servicios ya son independientes y reciben
 - [BITACORA.md](BITACORA.md) — qué se hizo, cuándo y por qué (leer primero si te unes al proyecto)
 - [FUENTES.md](FUENTES.md) — enfermedades, guías, medicamentos, interacciones, casos
 - [ARQUITECTURA.md](ARQUITECTURA.md) — estructura de carpetas y reglas de código
+- [AWS.md](AWS.md) — despliegue en la nube (crear, apagar y borrar)
 
 ## Estructura y reglas de código
 Ver **[ARQUITECTURA.md](ARQUITECTURA.md)** — **arquitectura en capas** (config, modelos, interfaces, repositorios, servicios, fábricas), igual que el proyecto C# de referencia; reglas SOLID; un archivo = una clase; datos fuera del código.

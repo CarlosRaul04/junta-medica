@@ -173,7 +173,7 @@ junta-medica-ia/
 ```
 
 Próximas áreas (se agregan en cada capa, con la misma forma):
-- `evaluation/` → en `services/`; versiones PostgreSQL (RDS) y S3 → en `repositories/`.
+- `evaluation/` → en `services/`.
 
 ### Agentes y debate (Fase 3)
 ```
@@ -224,9 +224,11 @@ junta_medica/
 │   └── debate_observer.py                # DebateObserver (avisos del orquestador para el progreso en vivo)
 ├── repositories/
 │   ├── database/sqlite_database.py       # SQLiteDatabase (conexión + tablas users y consultations)
-│   ├── users/sqlite_user_store.py        # SQLiteUserStore
-│   ├── history/sqlite_consultation_store.py  # SQLiteConsultationStore
+│   ├── database/mongo_database.py        # MongoDatabase (AWS: colecciones users, consultations, counters)
+│   ├── users/sqlite_user_store.py · mongo_user_store.py
+│   ├── history/sqlite_consultation_store.py · mongo_consultation_store.py
 │   ├── storage/local_file_storage.py     # LocalFileStorage (carpeta output/)
+│   ├── storage/s3_file_storage.py        # S3FileStorage (AWS S3)
 │   └── debate/debate_result_serializer.py    # DebateResultSerializer (resultado -> dict/JSON)
 ├── services/
 │   ├── users/                            # PasswordHasher (bcrypt), AuthService (cuentas, inicio de sesión, roles)
@@ -234,7 +236,7 @@ junta_medica/
 │   ├── reports/                          # ResultReader, CitationFormatter, DateFormatter, PdfReportBuilder
 │   └── debate/silent_debate_observer.py  # SilentDebateObserver (cuando nadie mira el progreso)
 ├── factories/
-│   ├── storage_factory.py                # AQUÍ se elige SQLite/local hoy y RDS/S3 en la nube
+│   ├── storage_factory.py                # elige SQLite/local o MongoDB/S3 según STORAGE_BACKEND del .env
 │   ├── user_factory.py · history_factory.py · report_factory.py
 └── ui/
     ├── main.py                           # página, inicio de sesión, barra lateral y menú
@@ -254,9 +256,8 @@ Reglas de la interfaz:
 - El resultado se muestra siempre desde el JSON guardado (`ResultReader`), así una consulta del historial se ve
   igual que una recién hecha.
 
-**Para pasar a AWS** (Fase 4b): crear `PostgresUserStore`, `PostgresConsultationStore` (mismas tablas que
-`sqlite_database.py`) y `S3FileStorage`, y devolverlos en `factories/storage_factory.py` según el `.env`.
-Nada más cambia.
+**En AWS** basta con `STORAGE_BACKEND=aws`, `MONGODB_URI` y `S3_BUCKET` en el `.env`: la fábrica entrega las
+versiones MongoDB y S3 y nada más cambia. Despliegue paso a paso: [AWS.md](AWS.md).
 
 ## 3. Reglas de código (obligatorias)
 

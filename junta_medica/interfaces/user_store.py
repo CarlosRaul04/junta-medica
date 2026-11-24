@@ -1,4 +1,4 @@
-"""UserStore: guarda y lee cuentas de usuario (implementaciones: SQLite local; luego PostgreSQL en AWS RDS)."""
+"""UserStore: guarda y lee cuentas de usuario (implementaciones: SQLite local, MongoDB en AWS)."""
 from abc import ABC, abstractmethod
 
 from junta_medica.models.users.role import Role

@@ -1,1 +1,1 @@
-"""Cuentas de usuario: sqlite_user_store.py (luego una versión PostgreSQL para AWS RDS)."""
+"""Cuentas de usuario: sqlite_user_store.py (local) y mongo_user_store.py (MongoDB en AWS)."""
